@@ -3,36 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo使用方法 | Mocilas&#39;s Blog</title>
+  <title>第一篇博客 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为了备忘，把hexo的使用方法记一下：
-首先在做好md文件并之后，在bash中输入1$ hexo s --debug
-来看一下有没有问题。此时便可以在http://localhost:4000/上看到自己的博客了。
-然后command+t另开启一个terminal，输入1$ hexo g
-生成本地静态网页文件。
-最后输入1$ hexo d
-部署到github上，过一阵便可以在http://moci">
+  <meta name="description" content="这是我的第一篇博客，就先说一下建立hexo时遇到的问题吧~
+ERROR Deployer not found: github在按照教程安装之后部署到网站上时，输入hexo deploy后提示如上错误。这时要输入如下命令：1$ npm install hexo-deployer-git --save
+然后将yml文件中的type： github修改为：type: git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo使用方法">
-<meta property="og:url" content="http://mocilas.github.io/2015/09/30/hexo使用方法/index.html">
+<meta property="og:title" content="第一篇博客">
+<meta property="og:url" content="http://mocilas.github.io/2015/11/04/第一篇博客/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="为了备忘，把hexo的使用方法记一下：
-首先在做好md文件并之后，在bash中输入1$ hexo s --debug
-来看一下有没有问题。此时便可以在http://localhost:4000/上看到自己的博客了。
-然后command+t另开启一个terminal，输入1$ hexo g
-生成本地静态网页文件。
-最后输入1$ hexo d
-部署到github上，过一阵便可以在http://moci">
-<meta property="og:updated_time" content="2015-09-30T14:46:48.000Z">
+<meta property="og:description" content="这是我的第一篇博客，就先说一下建立hexo时遇到的问题吧~
+ERROR Deployer not found: github在按照教程安装之后部署到网站上时，输入hexo deploy后提示如上错误。这时要输入如下命令：1$ npm install hexo-deployer-git --save
+然后将yml文件中的type： github修改为：type: git">
+<meta property="og:updated_time" content="2015-11-04T03:25:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo使用方法">
-<meta name="twitter:description" content="为了备忘，把hexo的使用方法记一下：
-首先在做好md文件并之后，在bash中输入1$ hexo s --debug
-来看一下有没有问题。此时便可以在http://localhost:4000/上看到自己的博客了。
-然后command+t另开启一个terminal，输入1$ hexo g
-生成本地静态网页文件。
-最后输入1$ hexo d
-部署到github上，过一阵便可以在http://moci">
+<meta name="twitter:title" content="第一篇博客">
+<meta name="twitter:description" content="这是我的第一篇博客，就先说一下建立hexo时遇到的问题吧~
+ERROR Deployer not found: github在按照教程安装之后部署到网站上时，输入hexo deploy后提示如上错误。这时要输入如下命令：1$ npm install hexo-deployer-git --save
+然后将yml文件中的type： github修改为：type: git">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -124,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
 					</div>
 				</section>
 				
@@ -184,11 +172,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-hexo使用方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/09/30/hexo使用方法/" class="article-date">
-  	<time datetime="2015-09-30T14:46:48.000Z" itemprop="datePublished">2015-09-30</time>
+      <a href="/2015/11/04/第一篇博客/" class="article-date">
+  	<time datetime="2015-11-04T03:25:25.000Z" itemprop="datePublished">2015-11-04</time>
 </a>
     </div>
   
@@ -201,7 +189,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo使用方法
+      第一篇博客
     </h1>
   
 
@@ -209,7 +197,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/hexo/">hexo</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -217,14 +213,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>为了备忘，把hexo的使用方法记一下：</p>
-<p>首先在做好md文件并之后，在bash中输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s --debug</span><br></pre></td></tr></table></figure></p>
-<p>来看一下有没有问题。<br>此时便可以在<a href="http://localhost:4000/上看到自己的博客了。" target="_blank" rel="external">http://localhost:4000/上看到自己的博客了。</a></p>
-<p>然后command+t另开启一个terminal，输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
-<p>生成本地静态网页文件。</p>
-<p>最后输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
-<p>部署到github上，过一阵便可以在<a href="http://mocilas.github.io">http://mocilas.github.io</a> 上看到更新后的博客了。<br>ps：如果<a href="http://mocilas.github.io">http://mocilas.github.io</a> 上还没有更新，可以去自己的github仓库里看有没有上传成功。</p>
-
+        <p>这是我的第一篇博客，就先说一下建立hexo时遇到的问题吧~</p>
+<h2 id="ERROR_Deployer_not_found:_github">ERROR Deployer not found: github</h2><h3 id="在按照教程安装之后部署到网站上时，输入hexo_deploy后提示如上错误。这时要输入如下命令：">在按照教程安装之后部署到网站上时，输入hexo deploy后提示如上错误。这时要输入如下命令：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="然后将yml文件中的type：_github修改为：">然后将yml文件中的type： github修改为：</h3><pre><code><span class="typedef"><span class="keyword">type</span>: git</span>
+</code></pre>
       
     </div>
     
@@ -233,11 +225,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2015/09/30/Markdown的一些语法笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown的一些语法笔记</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2015/11/04/Python Cheat Sheet/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Python Cheat Sheet
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -264,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo使用方法" data-title="hexo使用方法" data-url="http://mocilas.github.io/2015/09/30/hexo使用方法/"></div>
+	<div class="ds-thread" data-thread-key="第一篇博客" data-title="第一篇博客" data-url="http://mocilas.github.io/2015/11/04/第一篇博客/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

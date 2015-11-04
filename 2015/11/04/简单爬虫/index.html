@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>相册 | Mocilas&#39;s Blog</title>
+  <title>简单爬虫 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图片来自instagram，正在加载中…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="http://mocilas.github.io/instagram/index.html">
+  <meta name="description" content="《网络搜索引擎》课上老师举的一个简单的python写的爬虫例子，没有用正则表达式，用的是xpath来摘取网页中的内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单爬虫">
+<meta property="og:url" content="http://mocilas.github.io/2015/11/04/简单爬虫/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="图片来自instagram，正在加载中…">
-<meta property="og:updated_time" content="2015-09-28T09:36:13.000Z">
+<meta property="og:description" content="《网络搜索引擎》课上老师举的一个简单的python写的爬虫例子，没有用正则表达式，用的是xpath来摘取网页中的内容。">
+<meta property="og:updated_time" content="2015-11-04T03:26:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="图片来自instagram，正在加载中…">
+<meta name="twitter:title" content="简单爬虫">
+<meta name="twitter:description" content="《网络搜索引擎》课上老师举的一个简单的python写的爬虫例子，没有用正则表达式，用的是xpath来摘取网页中的内容。">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -166,7 +166,13 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-instagram" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-简单爬虫" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/简单爬虫/" class="article-date">
+  	<time datetime="2015-11-04T03:26:27.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
   
   <div class="article-inner">
     
@@ -177,7 +183,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      简单爬虫
     </h1>
   
 
@@ -185,7 +191,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crawler/">crawler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/python/">python</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -193,15 +207,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class="instagram" data-client-id="7ae0c2ae9cf24cd3a946892cf3b1acd9" data-user-id="996962740"><br><a href="https://instagram.com/mocilas/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a><br></div></p>
-<script src="/js/jquery.lazyload.js"></script>
-<script src="/js/instagram.js"></script>
+        <p>《网络搜索引擎》课上老师举的一个简单的python写的爬虫例子，没有用正则表达式，用的是xpath来摘取网页中的内容。</p>
+<a id="more"></a>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding=utf-8</span></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> html</span><br><span class="line"><span class="comment"># These are the xpaths we determined from snooping</span></span><br><span class="line">next_button_xpath = <span class="string">"//a[@id='key_nextpage']/@href"</span></span><br><span class="line">headline_xpath = <span class="string">"//div[@class='picbox']/dl/dt/a/text()"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># We'll use sleep to add some time in between requests so that we're not bombarding Gawker's server too hard.</span></span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now we'll fill this list of gawker titles by starting at the lading page and following "More Stories" links</span></span><br><span class="line">titles = []</span><br><span class="line">base_url = <span class="string">'http://www.mtime.com/hotest/&#123;&#125;'</span></span><br><span class="line">next_page = <span class="string">"http://www.mtime.com/hotest/"</span></span><br><span class="line"><span class="keyword">while</span> len(titles)&lt;<span class="number">50</span> <span class="keyword">and</span> next_page:</span><br><span class="line">    dom = html.parse(next_page)</span><br><span class="line">    headlines = dom.xpath(headline_xpath)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Retrieved &#123;&#125; titles from url: &#123;&#125;"</span>.format(len(headlines),next_page)</span><br><span class="line">    titles += headlines</span><br><span class="line">    next_pages = dom.xpath(next_button_xpath)</span><br><span class="line">    <span class="keyword">if</span> next_pages:</span><br><span class="line">        next_page = base_url.format(next_pages[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"No next button found"</span></span><br><span class="line">        next_page = <span class="keyword">None</span></span><br><span class="line">    sleep(<span class="number">3</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'mtime_titles.txt'</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> out:</span><br><span class="line">    out.write(<span class="string">'\n'</span>.join(titles).encode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'mtime_titles.txt'</span>)<span class="keyword">as</span> f:</span><br><span class="line">    titles_ = f.readlines()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"Well, we got &#123;&#125; Hot Movies!"</span>.format(len(titles_))</span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> titles[:<span class="number">15</span>]:</span><br><span class="line">    <span class="keyword">print</span> title</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2015/11/04/Matching a URL/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Matching a URL
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/04/Python Cheat Sheet/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python Cheat Sheet</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -225,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="instagram" data-title="相册" data-url="http://mocilas.github.io/instagram/index.html"></div>
+	<div class="ds-thread" data-thread-key="简单爬虫" data-title="简单爬虫" data-url="http://mocilas.github.io/2015/11/04/简单爬虫/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -269,7 +304,7 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
