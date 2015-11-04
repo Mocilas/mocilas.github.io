@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -167,6 +167,218 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-IOS开发随笔1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/IOS开发随笔1/" class="article-date">
+  	<time datetime="2015-11-04T07:17:30.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/04/IOS开发随笔1/">IOS开发随笔1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题记录">问题记录</h2><p>这周在做项目的时候遇到了几个问题，记录一下：</p>
+<ul>
+<li><p>在写UITableView的Footer的时候，可能是系统自带函数写错，导致footer不能正常显示，在这里记录一下，以后这种函数不要再写错：<br><code>- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{}</code></p>
+</li>
+<li><p>ios系统自带有翻书效果：<strong>UIPageViewController</strong> 之后有机会要研究一下！</p>
+</li>
+<li><p>项目中有一个从后台拉取数据显示的页面。从后台拉取的数据models需要按照其所属的课文分类。</p>
+<ul>
+<li>一开始是用NSMutableDictionary类型的sections存放这些models，键值就是课文名；然后用NSMutableArray类型的sortedSections存放这些models的课文名。这样导致的后果就是如果课文名是重复的，那么后面传送过来的数据就会插到前面来：因为我们是根据sortedSections里面的<strong>内容</strong>去sections中查找的。</li>
+<li>后来的解决办法是sortedSections不变，使用sortedSections中的<strong>序号</strong>作为sections的key。例如：<code>self.sortedSections[0]=@&quot;识字（一）&quot;;</code>相应于sections中，以“识字（一）”为标签的数据对应的key由原来的“识字（一）”改为“0”。这样即使内容是有重复的，但是序号是不会重复的。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Markdown的一些语法笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/Markdown的一些语法笔记/" class="article-date">
+  	<time datetime="2015-11-04T06:12:09.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/04/Markdown的一些语法笔记/">Markdown的一些语法笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近搭这个hexo的博客，被迫【大误】了解了一些markdown的语法。为了防止忘掉就做个笔记，不定期更新吧~</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Markdown/">Markdown</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/04/Markdown的一些语法笔记/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-数组排序" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/数组排序/" class="article-date">
+  	<time datetime="2015-11-04T05:55:43.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/04/数组排序/">数组排序</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数组排序">数组排序</h2><p>如果数组存储的是字符串对象，<strong>sortedArrayUsingSelector:</strong>是第一选择:</p>
+<pre><code>NSArray *<span class="typename">array</span> = @[@<span class="string">"John Appleseed"</span>, @<span class="string">"Tim Cook"</span>, @<span class="string">"Hair Force One"</span>, @<span class="string">"Michael Jurewitz"</span>];
+NSArray *sortedArray = [<span class="typename">array</span> sortedArrayUsingSelector:<span class="annotation">@selector</span>(localizedCaseInsensitiveCompare:)];
+</code></pre><p>下面的代码对存储数字的内容同样很好，因为 <strong>NSNumber</strong> 实现了 <strong>compare:</strong>:</p>
+<pre><code>NSArray *numbers = <span class="constant">@[</span><span class="constant">@9</span>, <span class="constant">@5</span>, <span class="constant">@11</span>, <span class="constant">@3</span>, <span class="constant">@1]</span><span class="comment">;</span>
+NSArray *sortedNumbers = [numbers sortedArrayUsingSelector:<span class="constant">@selector</span>(compare:)]<span class="comment">;</span>
+</code></pre><p>如果想更可控，可以使用基于函数指针的排序方法:</p>
+<pre><code>- (NSData *)sortedArrayHint;
+- (NSArray *)sortedArrayUsingFunction:(NSInteger <span class="comment">(*)(id, id, void *)</span>)comparator
+                      context:(void *)context;
+- (NSArray *)sortedArrayUsingFunction:(NSInteger <span class="comment">(*)(id, id, void *)</span>)comparator
+                      context:(void *)context hint:(NSData *)hint;
+</code></pre><p>苹果增加了一个方法来加速使用 <strong>sortedArrayHint</strong> 的排序。</p>
+<p><strong>hinted sort</strong> 方式在你有一个已排序的大数组 (N 个元素) 并且只改变其中一小部分（P 个添加和删除，这里 P远小于 N）时，会非常有效。你可以重用原来的排序结果，然后在 N 个老项目和 P 个新项目进行一个概念上的归并排序。为了得到合适的 hint，你应该在原来的数组排序后使用 sortedArrayHint 来在你需要的时候(比如在数组改变后想重新排序时)保证持有它。</p>
+<p>因为<strong>block</strong>的引入，也出现了一些基于<strong>block</strong>的排序方法:</p>
+<pre><code><span class="tag">-</span> (<span class="tag">NSArray</span> *)<span class="rule"><span class="attribute">sortedArrayUsingComparator</span>:<span class="value">(NSComparator)cmptr</span></span>;
+<span class="tag">-</span> (<span class="tag">NSArray</span> *)<span class="rule"><span class="attribute">sortedArrayWithOptions</span>:<span class="value">(NSSortOptions)opts
+            usingComparator:(NSComparator)cmptr</span></span>;
+</code></pre><p>性能上来说，不同的方法间并没有太多的不同。有趣的是，基于 <strong>selector</strong> 的方式是最快的。可以在 GitHub 上找到<a href="https://github.com/steipete/PSTFoundationBenchmark" target="_blank" rel="external">测试用的源代码</a>:</p>
+<pre><code>Sorting <span class="number">1000000</span> elements. selector: <span class="number">4947.90</span>[ms] function: <span class="number">5618.93</span>[ms] block: <span class="number">5082.98</span>[ms].
+</code></pre><p>引用来源：<a href="http://objccn.io/issue-7-1/" target="_blank" rel="external">http://objccn.io/issue-7-1/</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSArray/">NSArray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-hexo使用方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -219,68 +431,6 @@
 	</div>
 
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Markdown的一些语法笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/04/Markdown的一些语法笔记/" class="article-date">
-  	<time datetime="2015-11-04T03:27:22.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/Markdown的一些语法笔记/">Markdown的一些语法笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近搭这个hexo的博客，被迫【大误】了解了一些markdown的语法。为了防止忘掉就做个笔记，不定期更新吧~</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Markdown/">Markdown</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/04/Markdown的一些语法笔记/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
