@@ -3,30 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>git命令备忘 | Mocilas&#39;s Blog</title>
+  <title>在UIView中添加点击事件 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github常用命令备忘创建版本库初始化一个Git仓库，使用git init命令。
-添加文件到Git仓库，分两步：
-第一步，使用命令git add &amp;lt;file&amp;gt;，注意，可反复多次使用，添加多个文件；
-第二步，使用命令git commit，完成。
-git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支">
+  <meta name="description" content="在项目中，点击某个按钮需要整个屏幕用阴影覆盖，点击阴影后阴影消失。因为阴影是个UIView，所以需要给阴影加上点击事件。
+以UIView类型的self.baseView为例：
+
+首先设定UIView（或其子类）为可交互的：
+1self.baseView.userInteractionEnabled = YES;
+这里要说明一下，UIImageView和UILabel默认的userInteracti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git命令备忘">
-<meta property="og:url" content="http://mocilas.github.io/2015/11/04/git命令备忘/index.html">
+<meta property="og:title" content="在UIView中添加点击事件">
+<meta property="og:url" content="http://mocilas.github.io/2015/11/05/在UIView中添加点击事件/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="github常用命令备忘创建版本库初始化一个Git仓库，使用git init命令。
-添加文件到Git仓库，分两步：
-第一步，使用命令git add &amp;lt;file&amp;gt;，注意，可反复多次使用，添加多个文件；
-第二步，使用命令git commit，完成。
-git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支">
-<meta property="og:updated_time" content="2015-11-04T11:49:43.000Z">
+<meta property="og:description" content="在项目中，点击某个按钮需要整个屏幕用阴影覆盖，点击阴影后阴影消失。因为阴影是个UIView，所以需要给阴影加上点击事件。
+以UIView类型的self.baseView为例：
+
+首先设定UIView（或其子类）为可交互的：
+1self.baseView.userInteractionEnabled = YES;
+这里要说明一下，UIImageView和UILabel默认的userInteracti">
+<meta property="og:updated_time" content="2015-11-05T07:39:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git命令备忘">
-<meta name="twitter:description" content="github常用命令备忘创建版本库初始化一个Git仓库，使用git init命令。
-添加文件到Git仓库，分两步：
-第一步，使用命令git add &amp;lt;file&amp;gt;，注意，可反复多次使用，添加多个文件；
-第二步，使用命令git commit，完成。
-git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支">
+<meta name="twitter:title" content="在UIView中添加点击事件">
+<meta name="twitter:description" content="在项目中，点击某个按钮需要整个屏幕用阴影覆盖，点击阴影后阴影消失。因为阴影是个UIView，所以需要给阴影加上点击事件。
+以UIView类型的self.baseView为例：
+
+首先设定UIView（或其子类）为可交互的：
+1self.baseView.userInteractionEnabled = YES;
+这里要说明一下，UIImageView和UILabel默认的userInteracti">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -178,11 +181,11 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-git命令备忘" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-在UIView中添加点击事件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/04/git命令备忘/" class="article-date">
-  	<time datetime="2015-11-04T09:28:21.000Z" itemprop="datePublished">2015-11-04</time>
+      <a href="/2015/11/05/在UIView中添加点击事件/" class="article-date">
+  	<time datetime="2015-11-05T07:03:29.000Z" itemprop="datePublished">2015-11-05</time>
 </a>
     </div>
   
@@ -195,7 +198,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
         
   
     <h1 class="article-title" itemprop="name">
-      git命令备忘
+      在UIView中添加点击事件
     </h1>
   
 
@@ -204,12 +207,12 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UIView/">UIView</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/git/">git</a>
+	<a class="article-category-link" href="/categories/ios/">ios</a>
 	</div>
 
 
@@ -219,23 +222,28 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="github常用命令备忘">github常用命令备忘</h2><h3 id="创建版本库">创建版本库</h3><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
-<p>添加文件到Git仓库，分两步：</p>
-<p>第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
-<p>第二步，使用命令<code>git commit</code>，完成。</p>
-<p><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
-<h3 id="关联远程库">关联远程库</h3><p>要关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git；</code></p>
-<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
-<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
-<h3 id="使用git在本地创建一个项目的过程">使用git在本地创建一个项目的过程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">makdir ~/hello-world    //创建一个项目hello-world</span><br><span class="line"><span class="built_in">cd</span> ~/hello-world       //打开这个项目</span><br><span class="line">git init             //初始化 </span><br><span class="line">touch README</span><br><span class="line">git add README        //更新README文件</span><br><span class="line">git commit -m <span class="string">'first commit'</span>     //提交更新，并注释信息“first commit”</span><br><span class="line">git remote add origin git@github.com:mocilas/hello-world.git     //连接远程github项目  </span><br><span class="line">git push -u origin master     //将本地项目更新到github项目上去</span><br></pre></td></tr></table></figure>
-<h3 id="github提交代码的命令：">github提交代码的命令：</h3><p>第一次关联仓库，提交：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# about-me"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add &lt;file&gt;</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com:mocilas/about-me.git</span><br><span class="line">git push -u origin master …or push an existing repository from the <span class="built_in">command</span> line</span><br><span class="line">git remote add origin https://github.com:mocilas/about-me.git</span><br><span class="line">git push -u origin mastergitgit</span><br></pre></td></tr></table></figure>
-<p>其中在仓库已经建立好、链接好之后，如果修改了代码再提交只需使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">"修改了代码"</span></span><br><span class="line">git push -u origin gh-pages</span><br></pre></td></tr></table></figure>
-<h3 id="常见错误">常见错误</h3><ul>
-<li><p>如果输入<code>git remote add origin git@github.com:mocilas/about-me.git</code><br>  提示出错信息：fatal: remote origin already exists.<br>  解决办法如下：<br>  1、先输入<code>git remote rm origin</code><br>  2、再输入<code>git remote add origin git@github.com:mocilas/about-me.git</code>就不会报错了！</p>
+        <p>在项目中，点击某个按钮需要整个屏幕用阴影覆盖，点击阴影后阴影消失。因为阴影是个UIView，所以需要给阴影加上点击事件。</p>
+<p>以UIView类型的self.baseView为例：</p>
+<ul>
+<li><p>首先设定UIView（或其子类）为可交互的：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span><span class="variable">.baseView</span><span class="variable">.userInteractionEnabled</span> = <span class="literal">YES</span>;</span><br></pre></td></tr></table></figure>
+<p>这里要说明一下，UIImageView和UILabel默认的userInteractionEnabled为NO，而UIView默认为YES。</p>
 </li>
-<li><p>如果输入<code>git push origin master</code><br>提示出错信息：error:failed to push som refs to …….<br>解决办法如下：<br>  1、先输入<code>git pull origin master //先把远程服务器github上面的文件拉下来</code><br>  2、再输入<code>git push origin master</code><br>  3、如果出现报错 fatal: Couldn’t find remote ref master或者fatal: ‘origin’ does not appear to be a git repository以及fatal: Could not read from remote repository.<br>  4、则需要重新输入<code>git remote add origingit@github.com:mocilas/about-me.git</code></p>
+<li><p>添加tap手势：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//tap手势</span></span><br><span class="line">UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] <span class="string">initWithTarget:</span>self <span class="string">action:</span><span class="annotation">@selector</span>(<span class="string">handleSingleTap:</span>)];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将手势添加至需要相应的view中</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[self.baseView addGestureRecognizer:singleTap]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行触发的方法：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(void)<span class="tag">handleSingleTap</span>:(UITapGestureRecognizer *)<span class="tag">sender</span>&#123;</span><br><span class="line"><span class="comment">//在这里写触发事件</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认为单击触发事件：</p>
+</li>
+<li><p>设置手指个数：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[handleSingleTap setNumberOfTapsRequired:1]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取是哪个View触发了此方法：<br><code>sender.view ;</code></p>
 </li>
 </ul>
 
@@ -247,18 +255,9 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
     
 <nav id="article-nav">
   
-    <a href="/2015/11/05/在UIView中添加点击事件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          在UIView中添加点击事件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/04/IOS开发随笔1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IOS开发随笔1</div>
+    <a href="/2015/11/04/git命令备忘/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git命令备忘</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -287,7 +286,7 @@ git add命令实际上就是把要提交的所有修改放到暂存区（Stage�
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="git命令备忘" data-title="git命令备忘" data-url="http://mocilas.github.io/2015/11/04/git命令备忘/"></div>
+	<div class="ds-thread" data-thread-key="在UIView中添加点击事件" data-title="在UIView中添加点击事件" data-url="http://mocilas.github.io/2015/11/05/在UIView中添加点击事件/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
