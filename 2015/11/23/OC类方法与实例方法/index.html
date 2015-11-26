@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>OC类方法与实例方法 | Mocilas&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ios开发中类方法与self的注意点 与实例方法区别">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OC类方法与实例方法">
+<meta property="og:url" content="http://mocilas.github.io/2015/11/23/OC类方法与实例方法/index.html">
+<meta property="og:site_name" content="Mocilas's Blog">
+<meta property="og:description" content="ios开发中类方法与self的注意点 与实例方法区别">
+<meta property="og:updated_time" content="2015-11-23T09:13:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OC类方法与实例方法">
+<meta name="twitter:description" content="ios开发中类方法与self的注意点 与实例方法区别">
+  
+    <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://avatars1.githubusercontent.com/u/10126518?v=3&u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&s=140">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/10126518?v=3&amp;u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mocilas</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Stay Hungry! Stay Foolish!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mocilas" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/mocilas/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/107368566924742778760/posts" title="google">google</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 12.5px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">As long as you look at me, I will be pure forever.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mocilas</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/10126518?v=3&amp;u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&amp;s=140" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mocilas</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Stay Hungry! Stay Foolish!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mocilas" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/mocilas/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/107368566924742778760/posts" title="google">google</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-OC类方法与实例方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/23/OC类方法与实例方法/" class="article-date">
+  	<time datetime="2015-11-23T07:48:03.000Z" itemprop="datePublished">2015-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      OC类方法与实例方法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类/">类</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ios开发中类方法与self的注意点_与实例方法区别">ios开发中类方法与self的注意点 与实例方法区别</h2><a id="more"></a>
+<h3 id="类方法(class_method)和实例方法(instance_method)。">类方法(class method)和实例方法(instance method)。</h3><p>类方法被限定在类范围内，不能被类的实例调用（即脱离实例运行）。alloc就是一种类方法。实例方法限定在对象实例的范围内（即实例化之前不能运行）。init就是一种实例方法，被alloc方法回的对象实例调用。<br>    NSObject * object1 = [[NSObject alloc] init];<br>instance method 以减号 “-“ 开头<br>class method 以加号 “+” 开头，相当于static方法 </p>
+<h3 id="OC对类的定义和实现以及初始化">OC对类的定义和实现以及初始化</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明类接口，继承NSObject对象（该对象是OC中所有类的顶级父类，所有类都继承于它）</span></span><br><span class="line"><span class="variable">@interface</span> ClassName ：NSObject</span><br><span class="line"><span class="comment">//成员属性和成员函数的声明</span></span><br><span class="line">+（void）function；<span class="comment">//类方法，不需要实例化对象就可以调用的方法</span></span><br><span class="line">- （void）function2 ：（NSString *）arg；<span class="comment">//成员方法，必须通过实例化的对象调用</span></span><br><span class="line"><span class="variable">@end</span></span><br><span class="line"><span class="comment">//实现类</span></span><br><span class="line"><span class="variable">@imlementation</span> ClassName</span><br><span class="line"><span class="comment">//成员属性初始化和方法的定义</span></span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
+<p>对象的初始化：<br>    ClassName *obj = [[ClassName alloc] init]<br>OC中以消息机制传递信息，发送alloc消息给类分配内存空间，发送init消息生成对象，指针指向对象本身。</p>
+<h3 id="类方法的调用">类方法的调用</h3><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[obj <span class="function"><span class="keyword">function</span>]；</span><br><span class="line"><span class="title">NSString</span> *<span class="title">str</span> =</span> [NSString stringWithString:@<span class="string">"hello"</span>];</span><br><span class="line">[obj function2 : <span class="built_in">str</span>];</span><br></pre></td></tr></table></figure>
+<h3 id="输出函数">输出函数</h3><p>根据不同的输出格式输出不同的值 （%d ：整形 ，%@：对象&lt;发送description消息&gt;，%s：字符串）<br>    NSlog（@“The result is %d”,intNum）;<br>CF代表Core Foundation (Cocoa)<br>CFShow发送description给它显示的对象，CFShow打印的信息不会显示时间戳，NSLog会显示，同时CFShow不需要格式字符 串，它只能用于对象<br>    CFShow(obj);</p>
+<h3 id="属性">属性</h3><p>支持点表示法：<br>    myTableViewCell.textLabel.text = @”hello” 等价于 [[myTableViewCell textLabel] setText:@”hello”];<br>使用属性生成器 property<br>在h文件中声明： @property int year<br>在m文件中合成生成器：@synthesize year<br>使用 obj.year = 1999 相当于调用了 [obj setYear:1999];<br>可以自定义取值方法和赋值方法（getter and setter）<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-（<span class="built_in">int</span>）<span class="built_in">year</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">year</span>;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>) setYear : (<span class="built_in">int</span>) newYear</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//此处添加了一些基本的内存管理方法，保留新的值，释放以前的值</span></span><br><span class="line">	<span class="keyword">if</span>(newYear != <span class="built_in">year</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		[<span class="built_in">year</span> release];</span><br><span class="line">		<span class="built_in">year</span> = [newYear retain];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也可以绕过oc的命名约定，自己指定getter和setter方法的名称；<br>    @property(getter = isExist,setter = setExist:) BOOL exist;<br>    @synthesize exist;<br>使用过程中既可以使用新定义的方法名，也可以使用以前的方法（点表示法）</p>
+<p>属性的特性：readwrite readonly assign retain copy nonatomic<br><strong>assign</strong>：默认行为，使用@property int year就使用了assign行为，就是给实例变量赋了一个值<br><strong>retain</strong>：实现了两个功能，一个是保留了赋值时传递的对象，其次是赋值前释放了以前值，使用retain可以实现上面讨论的内存管理的优点，使用时加上 @property （retain）int year；<br><strong>copy</strong>：发送一条复制的消息给被传递的对象，保留它，并释放任何以前的值；<br><strong>nonactomic</strong>：非原子访问器，加上后可以提升访问速度，但当两个线程同时修改同一个属性时就会出现问题，原子属性可以保证属性在被一个线程使用时不被另一个线程访问，不存在atomic关键字，默认情况下，所有方法都是自动合成的。（类似与java中的线程锁机制synchronized）<br><strong>readwrite</strong>：可读写<br><strong>readonly</strong>：只读</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/23/UIImageView相关用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          UIImageView相关用法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/23/iOS开发笔记-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS开发笔记(1)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="OC类方法与实例方法" data-title="OC类方法与实例方法" data-url="http://mocilas.github.io/2015/11/23/OC类方法与实例方法/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mocilas
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
