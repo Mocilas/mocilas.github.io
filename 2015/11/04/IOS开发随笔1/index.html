@@ -19,7 +19,7 @@ ios系统自带有翻">
 在写UITableView的Footer的时候，可能是系统自带函数写错，导致footer不能正常显示，在这里记录一下，以后这种函数不要再写错：- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{}
 
 ios系统自带有翻">
-<meta property="og:updated_time" content="2015-11-05T08:20:14.000Z">
+<meta property="og:updated_time" content="2015-12-10T03:07:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS开发随笔1">
 <meta name="twitter:description" content="问题记录这周在做项目的时候遇到了几个问题，记录一下：
@@ -118,7 +118,7 @@ ios系统自带有翻">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 12.5px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 14px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 12px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 16px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -235,8 +235,7 @@ ios系统自带有翻">
 </li>
 <li><p><code>[view removeFromSuperview];</code>这个命令只是把view从它的上一层superview中移除，而view本身并没有被销毁，只是看不见了，如果再add进去的话还是有的。如果要销毁这个view的话，直接置空即可：<code>view = nil;</code></p>
 <ul>
-<li><code>- (void)removeFromSuperview</code><br>Discussion<br>If the receiver’s superview is not nil, the superview releases the receiver. If you plan to reuse a view, be sure to retain it before calling this method and release it again later as appropriate.<br>译：如果当前view对象的父视图不为空，则父视图会release一次当前视图对象。如果你还想重用当前view，你应该在调用removeFromSuperview之前，retain一次当前view对象，但不要忘记，在恰当的时候要release它，以确保没有内存泄露。</li>
-<li>Never call this method from inside your view’s drawRect: method.<br>永远不要在你的view的drawRect方法中调用removeFromSuperview</li>
+<li><code>- (void)removeFromSuperview</code></li>
 </ul>
 </li>
 <li><p>在添加下拉菜单的时候，每个选项都是相同的，而我是一个一个控件写的，后来被<a href="http://duxinfeng.com/" target="_blank" rel="external">峰峰</a>批评了= =，说应该用for循环的。于是我改为了for循环，源码如下。这样如果还要有新的选项加进去的话，只需要往数组里添加字符串就行了。</p>

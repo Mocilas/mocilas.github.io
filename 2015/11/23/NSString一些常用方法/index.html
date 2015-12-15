@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://mocilas.github.io/2015/11/23/NSString一些常用方法/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
 <meta property="og:description" content="NSString一些常用方法">
-<meta property="og:updated_time" content="2015-11-26T08:04:47.000Z">
+<meta property="og:updated_time" content="2015-12-10T08:11:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NSString一些常用方法">
 <meta name="twitter:description" content="NSString一些常用方法">
@@ -106,7 +106,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 12.5px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 14px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 12px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 16px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -217,13 +217,13 @@
 <h3 id="查找字符串某处是否包含其它字符串">查找字符串某处是否包含其它字符串</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NSString *string1 = @<span class="string">"This is a string"</span>;</span><br><span class="line">NSString *string2 = @<span class="string">"string"</span>;</span><br><span class="line">NSRange <span class="built_in">range</span> = [string1 rangeOfStrin<span class="variable">g:string2</span>];</span><br><span class="line"><span class="keyword">int</span> location = <span class="built_in">range</span>.location; </span><br><span class="line"><span class="keyword">int</span> leight = <span class="built_in">range</span>.length;</span><br></pre></td></tr></table></figure>
 <h3 id="字符串截取">字符串截取</h3><ul>
 <li><p>从字符串的开头一直截取到指定的位置，但不包括该位置的字符</p>
-<p>  NSString *string2 = [string1 substringToIndex:3];</p>
+<p>  <code>NSString *string2 = [string1 substringToIndex:3];</code></p>
 </li>
 <li><p>以指定位置开始（包括指定位置的字符），并包括之后的全部字符</p>
-<p>  NSString *string2 = [string1 substringFromIndex:3];</p>
+<p>  <code>NSString *string2 = [string1 substringFromIndex:3];</code></p>
 </li>
 <li><p>按照所给出的位置，长度，任意地从字符串中截取子串</p>
-<p>  NSString *string2 = [string1 substringWithRange:NSMakeRange(0, 4)];</p>
+<p>  <code>NSString *string2 = [string1 substringWithRange:NSMakeRange(0, 4)];</code></p>
 </li>
 </ul>
 <h3 id="按照固定长度生成空字符串">按照固定长度生成空字符串</h3><pre><code><span class="built_in">NSMutableString</span> *String = [<span class="built_in">NSMutableString</span> stringWithCapacity:<span class="number">40</span>];
