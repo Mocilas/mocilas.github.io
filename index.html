@@ -193,22 +193,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="用sourceTree提交代码时遇到的问题">用sourceTree提交代码时遇到的问题</h2><h3 id="xcuserstate">xcuserstate</h3><p>每次并没有改什么东西，只是随便点了几下就会出现的未暂存文件，可以对其停止追踪！<br><img src="http://a1.qpic.cn/psb?/V14ViWvN495Mbd/pMZb.I3Zqdlv53mVUJsq3gyWEBOqaYFQgjUTLsTIUVA!/b/dHQBAAAAAAAA&amp;bo=0wLfAdMC3wEDCSw!&amp;rf=viewer_4" alt=""><br>右键，停止追踪，提交，推送。以后就不会再有这个讨厌的文件出现了！</p>
-<h3 id="还没有提交就拉代码的囧境">还没有提交就拉代码的囧境</h3><p>有的时候忘了拉取代码就开始提交，往往这时候就会出现提交成功，但无法推送的报错情况：<br><img src="http://a3.qpic.cn/psb?/V14ViWvN495Mbd/s7zQ6rbkaLwyJXboo9cMr0Mc29RcQ5bs3WSLYUFDN8s!/b/dHYBAAAAAAAA&amp;bo=1gG.ANYBvgADCSw!&amp;rf=viewer_4" alt=""></p>
-<p>而且这时候的状态就是既无法提交又不能拉取代码的窘境，就连贮藏也不行。<br><img src="http://a2.qpic.cn/psb?/V14ViWvN495Mbd/gMW1PEzpowERtihzWt1h118Q2wJJGNLkJ9*IoDnkjyA!/b/dHIBAAAAAAAA&amp;bo=AQKqAAECqgADACU!&amp;rf=viewer_4" alt=""></p>
+        <h2 id="用sourceTree提交代码时遇到的问题">用sourceTree提交代码时遇到的问题</h2><h3 id="xcuserstate">xcuserstate</h3><p>每次并没有改什么东西，只是随便点了几下就会出现的未暂存文件，可以对其停止追踪！<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2014.45.29.png" alt=""><br>右键，停止追踪，提交，推送。以后就不会再有这个讨厌的文件出现了！</p>
+<h3 id="还没有提交就拉代码的囧境">还没有提交就拉代码的囧境</h3><p>有的时候忘了拉取代码就开始提交，往往这时候就会出现提交成功，但无法推送的报错情况：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.54.28.png" alt=""></p>
+<p>而且这时候的状态就是既无法提交又不能拉取代码的窘境，就连贮藏也不行。<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.54.38.png" alt=""></p>
 <p>搞了很久，研究出两个办法:</p>
 <ul>
-<li><p>方法一：使用reset+贮藏<br>首先，将本地的develop分支reset到之前的版本：<br><img src="http://a2.qpic.cn/psb?/V14ViWvN495Mbd/3P*71nHoASZQKEXlDsKiXVgtVrrZninYL8iCfr2i8x4!/b/dHIBAAAAAAAA&amp;bo=ewFYAXsBWAEDCSw!&amp;rf=viewer_4" alt=""></p>
+<li><p>方法一：使用reset+贮藏<br>首先，将本地的develop分支reset到之前的版本：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.55.50.png" alt=""></p>
 <p><strong>reset develop to this commit</strong></p>
-<p>选择软合并或者是默认的混合合并【千万不要选择硬合并！不然之前码的代码都没了】<br><img src="http://a1.qpic.cn/psb?/V14ViWvN495Mbd/9nbuylJfhfJiAj*PnUiB2*MSXi5PF*W8Hmq0aoHhug4!/b/dG8AAAAAAAAA&amp;bo=uAGyALgBsgADACU!&amp;rf=viewer_4" alt=""></p>
-<p>然后就回到了初始状态：<br><img src="http://a1.qpic.cn/psb?/V14ViWvN495Mbd/W0dn3xI9aoTK1As2l6uQwp0mifH91PxZddx*Vl0lP6w!/b/dI8BAAAAAAAA&amp;bo=eANbAngDWwIDACU!&amp;rf=viewer_4" alt=""></p>
+<p>选择软合并或者是默认的混合合并【千万不要选择硬合并！不然之前码的代码都没了】<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.56.19.png" alt=""></p>
+<p>然后就回到了初始状态：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.03.10.png" alt=""></p>
 <p>这时候再暂存+贮藏一下，拉取代码，应用贮藏，解决冲突就可以了~</p>
 </li>
 <li><p>方法二：建立一个新的分支<br>右键新建一个test分支：</p>
-<p><img src="http://a2.qpic.cn/psb?/V14ViWvN495Mbd/rPGC4*vcXi3QAU0jkKPH9nb1DB0xbiehZ5.oPIU94nw!/b/dHIBAAAAAAAA&amp;bo=lAFpAZQBaQEDACU!&amp;rf=viewer_4" alt=""><br>然后checkout到原来的分支：</p>
-<p><img src="http://a2.qpic.cn/psb?/V14ViWvN495Mbd/xnXr7wLY3ydotdHTxJL5PqeF8p9jETGrEJ8MKUiiETo!/b/dHIBAAAAAAAA&amp;bo=RwKRAEcCkQADACU!&amp;rf=viewer_4" alt=""><br>将原来的develop分支reset到初始状态（这个时候要用硬合并，因为你的代码已经保存到test分支里面了所以不用担心）</p>
-<p><img src="http://a1.qpic.cn/psb?/V14ViWvN495Mbd/s1yOJyixklMt7Ru0AYp0PQEJPK0AfoYX4db*R*DwB.I!/b/dI8BAAAAAAAA&amp;bo=tgGxALYBsQADACU!&amp;rf=viewer_4" alt=""><br>这个时候终于可以拉取远端了！</p>
-<p><img src="http://a2.qpic.cn/psb?/V14ViWvN495Mbd/meFBUyUFr4.6VcxFpQyxvmzQ3R79eBFWs3eYxgfdUgM!/b/dHIBAAAAAAAA&amp;bo=ZwIvAWcCLwEDACU!&amp;rf=viewer_4" alt=""><br>然后再把test分支合并到develop分支就可以了~</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.34.08.png" alt=""></p>
+<p>然后checkout（检出，其实就是双击）到原来的分支：</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.31.41.png" alt=""></p>
+<p>将原来的develop分支reset到初始状态（这个时候要用硬合并，因为你的代码已经保存到test分支里面了所以不用担心）</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.35.14.png" alt=""></p>
+<p>这个时候终于可以拉取远端了！</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.35.32.png" alt=""></p>
+<p>然后再把test分支合并到develop分支就可以了~</p>
 <p>其实总结一下这两个方法的原理是一样的，都是先把自己的代码存到一边，然后再拉取远端代码，再合并。如果中间遇到不能拉取的情况，一定是xcuserstate文件在作怪！嗯！</p>
 </li>
 </ul>
