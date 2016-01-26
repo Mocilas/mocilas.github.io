@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 12.5px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 12.5px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 12.5px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,72 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios学习笔记-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/26/ios学习笔记-3/" class="article-date">
+  	<time datetime="2016-01-26T05:02:32.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/26/ios学习笔记-3/">ios学习笔记-3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="iOS开发笔记-3">iOS开发笔记-3</h2><h3 id="关于Masonry包">关于Masonry包</h3><p>是<code>#import &lt;Masonry.h&gt;</code><br>不是<code>#import &quot;Masonry.h&quot;</code></p>
+<h3 id="本地存取">本地存取</h3><ul>
+<li>取：<br>  <code>[[NSUserDefaults standardUserDefaults] boolForKey:bool键];</code><br>  <code>[[NSUserDefaults standardUserDefaults] stringForKey:键];</code></li>
+<li>存：<br>  <code>[[NSUserDefaults standardUserDefaults] setBool:bool值 forKey:bool键];</code><br>  <code>[[NSUserDefaults standardUserDefaults] setValue:值 forKey:键];</code></li>
+</ul>
+<h3 id="设置button颜色">设置button颜色</h3><p>不是用<code>[button.title.label setTextColor...];</code><br>而是用<code>[button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];</code></p>
+<h3 id="设置让tableviewL里面的某个cell不可选中">设置让tableviewL里面的某个cell不可选中</h3><p><code>cell.selectionStyle = NO;</code></p>
+<h3 id="数据库操作时遇到的问题">数据库操作时遇到的问题</h3><p>之前写数据库的时候，新建了一个表，可以正常增删改查。后来觉得表的某一列的列名起的不好，于是在代码中把列名改了，然后就不能正常操作数据库了。这时候应该去sqlite中把表删除（或者直接卸载掉APP）然后让程序重新建表就可以了。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-吐槽一句" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -790,68 +856,6 @@
 
 
   
-    <article id="post-python笔记-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/18/python笔记-1/" class="article-date">
-  	<time datetime="2015-11-18T01:03:06.000Z" itemprop="datePublished">2015-11-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/18/python笔记-1/">python笔记(1)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="python学习笔记">python学习笔记</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/python/">python</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/18/python笔记-1/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -862,7 +866,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 Mocilas
+    		&copy; 2016 Mocilas
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
