@@ -167,6 +167,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Python-Inverted-Index-for-dummies" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/18/Python-Inverted-Index-for-dummies/" class="article-date">
+  	<time datetime="2015-11-18T06:55:35.000Z" itemprop="datePublished">2015-11-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/18/Python-Inverted-Index-for-dummies/">Python: Inverted Index for dummies</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Python:_Inverted_Index_for_dummies">Python: Inverted Index for dummies</h2><p>An Inverted Index is an index data structure storing a mapping from content, such as words or numbers, to its document locations and is generally used to allow fast full text searches.</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/python/">python</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/18/Python-Inverted-Index-for-dummies/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-python笔记-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -759,85 +821,6 @@
         <p class="article-more-link">
           <a  href="/2015/11/04/Markdown的一些语法笔记/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-数组排序" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/04/数组排序/" class="article-date">
-  	<time datetime="2015-11-04T05:55:43.000Z" itemprop="datePublished">2015-11-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/04/数组排序/">数组排序</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数组排序">数组排序</h2><p>引用来源：<a href="http://objccn.io/issue-7-1/" target="_blank" rel="external">http://objccn.io/issue-7-1/</a></p>
-<p>如果数组存储的是字符串对象，<strong>sortedArrayUsingSelector:</strong>是第一选择:</p>
-<pre><code>NSArray *<span class="typename">array</span> = @[@<span class="string">"John Appleseed"</span>, @<span class="string">"Tim Cook"</span>, @<span class="string">"Hair Force One"</span>, @<span class="string">"Michael Jurewitz"</span>];
-NSArray *sortedArray = [<span class="typename">array</span> sortedArrayUsingSelector:<span class="annotation">@selector</span>(localizedCaseInsensitiveCompare:)];
-</code></pre><p>下面的代码对存储数字的内容同样很好，因为 <strong>NSNumber</strong> 实现了 <strong>compare:</strong>:</p>
-<pre><code>NSArray *numbers = <span class="constant">@[</span><span class="constant">@9</span>, <span class="constant">@5</span>, <span class="constant">@11</span>, <span class="constant">@3</span>, <span class="constant">@1]</span><span class="comment">;</span>
-NSArray *sortedNumbers = [numbers sortedArrayUsingSelector:<span class="constant">@selector</span>(compare:)]<span class="comment">;</span>
-</code></pre><p>如果想更可控，可以使用基于函数指针的排序方法:</p>
-<pre><code>- (NSData *)sortedArrayHint;
-- (NSArray *)sortedArrayUsingFunction:(NSInteger <span class="comment">(*)(id, id, void *)</span>)comparator
-                      context:(void *)context;
-- (NSArray *)sortedArrayUsingFunction:(NSInteger <span class="comment">(*)(id, id, void *)</span>)comparator
-                      context:(void *)context hint:(NSData *)hint;
-</code></pre><p>苹果增加了一个方法来加速使用 <strong>sortedArrayHint</strong> 的排序。</p>
-<p><strong>hinted sort</strong> 方式在你有一个已排序的大数组 (N 个元素) 并且只改变其中一小部分（P 个添加和删除，这里 P远小于 N）时，会非常有效。你可以重用原来的排序结果，然后在 N 个老项目和 P 个新项目进行一个概念上的归并排序。为了得到合适的 hint，你应该在原来的数组排序后使用 sortedArrayHint 来在你需要的时候(比如在数组改变后想重新排序时)保证持有它。</p>
-<p>因为<strong>block</strong>的引入，也出现了一些基于<strong>block</strong>的排序方法:</p>
-<pre><code><span class="tag">-</span> (<span class="tag">NSArray</span> *)<span class="rule"><span class="attribute">sortedArrayUsingComparator</span>:<span class="value">(NSComparator)cmptr</span></span>;
-<span class="tag">-</span> (<span class="tag">NSArray</span> *)<span class="rule"><span class="attribute">sortedArrayWithOptions</span>:<span class="value">(NSSortOptions)opts
-            usingComparator:(NSComparator)cmptr</span></span>;
-</code></pre><p>性能上来说，不同的方法间并没有太多的不同。有趣的是，基于 <strong>selector</strong> 的方式是最快的。可以在 GitHub 上找到<a href="https://github.com/steipete/PSTFoundationBenchmark" target="_blank" rel="external">测试用的源代码</a>:</p>
-<pre><code>Sorting <span class="number">1000000</span> elements. selector: <span class="number">4947.90</span>[ms] function: <span class="number">5618.93</span>[ms] block: <span class="number">5082.98</span>[ms].
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSArray/">NSArray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
       
       <div class="clearfix"></div>
     </div>

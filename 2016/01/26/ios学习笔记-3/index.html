@@ -5,22 +5,17 @@
   
   <title>ios学习笔记-3 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS开发笔记-3关于Masonry包是#import &amp;lt;Masonry.h&amp;gt;不是#import &amp;quot;Masonry.h&amp;quot;
-本地存取
-取：  [[NSUserDefaults standardUserDefaults] boolForKey:bool键];  [[NSUserDefaults standardUserDefaults] stringForKey:键];">
+  <meta name="description" content="iOS开发笔记-3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios学习笔记-3">
 <meta property="og:url" content="http://mocilas.github.io/2016/01/26/ios学习笔记-3/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="iOS开发笔记-3关于Masonry包是#import &amp;lt;Masonry.h&amp;gt;不是#import &amp;quot;Masonry.h&amp;quot;
-本地存取
-取：  [[NSUserDefaults standardUserDefaults] boolForKey:bool键];  [[NSUserDefaults standardUserDefaults] stringForKey:键];">
-<meta property="og:updated_time" content="2016-01-26T06:17:43.000Z">
+<meta property="og:description" content="iOS开发笔记-3">
+<meta property="og:image" content="http://7xp8qf.com1.z0.glb.clouddn.com/masonryQQ20160129-0.png">
+<meta property="og:updated_time" content="2016-01-30T15:35:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios学习笔记-3">
-<meta name="twitter:description" content="iOS开发笔记-3关于Masonry包是#import &amp;lt;Masonry.h&amp;gt;不是#import &amp;quot;Masonry.h&amp;quot;
-本地存取
-取：  [[NSUserDefaults standardUserDefaults] boolForKey:bool键];  [[NSUserDefaults standardUserDefaults] stringForKey:键];">
+<meta name="twitter:description" content="iOS开发笔记-3">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -213,7 +208,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="iOS开发笔记-3">iOS开发笔记-3</h2><h3 id="关于Masonry包">关于Masonry包</h3><p>是<code>#import &lt;Masonry.h&gt;</code><br>不是<code>#import &quot;Masonry.h&quot;</code></p>
+        <h2 id="iOS开发笔记-3">iOS开发笔记-3</h2><a id="more"></a>
+<h3 id="关于Masonry包">关于Masonry包</h3><p>是<code>#import &lt;Masonry.h&gt;</code><br>不是<code>#import &quot;Masonry.h&quot;</code></p>
+<h3 id="设置section之间的背景颜色">设置section之间的背景颜色</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">tableView:</span>(UITableView *)tableView <span class="string">willDisplayFooterView:</span>(UIView *)view <span class="string">forSection:</span>(NSInteger)section &#123;</span><br><span class="line"><span class="comment">//设置section之间的背景颜色</span></span><br><span class="line">view.tintColor = kThemeHomePageBackgroundColor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="cell-accessoryView_无法获取">cell.accessoryView 无法获取</h3><p>在写cell的页面的时候，使用了系统自带右侧的箭头的cell格式：<br><code>cell.accessoryType=UITableViewCellAccessoryNone;</code><br>然后如下图所示，想在右侧箭头左边加label，在使用Masonry相对布局获取accessoryView的mas_left的时候获取不到，其他属性也获取不到。不知道什么原因。准备去stackoverflow问一下，如果得到了回答就把答案更新到这里。</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/masonryQQ20160129-0.png" alt=""></p>
 <h3 id="本地存取">本地存取</h3><ul>
 <li>取：<br>  <code>[[NSUserDefaults standardUserDefaults] boolForKey:bool键];</code><br>  <code>[[NSUserDefaults standardUserDefaults] stringForKey:键];</code></li>
 <li>存：<br>  <code>[[NSUserDefaults standardUserDefaults] setBool:bool值 forKey:bool键];</code><br>  <code>[[NSUserDefaults standardUserDefaults] setValue:值 forKey:键];</code></li>
@@ -221,7 +220,13 @@
 <h3 id="设置button颜色">设置button颜色</h3><p>不是用<code>[button.title.label setTextColor...];</code><br>而是用<code>[button setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];</code></p>
 <h3 id="设置让tableviewL里面的某个cell不可选中">设置让tableviewL里面的某个cell不可选中</h3><p><code>cell.selectionStyle = NO;</code></p>
 <h3 id="数据库操作时遇到的问题">数据库操作时遇到的问题</h3><p>之前写数据库的时候，新建了一个表，可以正常增删改查。后来觉得表的某一列的列名起的不好，于是在代码中把列名改了，然后就不能正常操作数据库了。这时候应该去sqlite中把表删除（或者直接卸载掉APP）然后让程序重新建表就可以了。</p>
-
+<h3 id="截取字符串">截取字符串</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[str substringFromIndex:<span class="number">2</span>]);<span class="comment">//从指定的字符串开始到尾部</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[str substringToIndex:<span class="number">5</span>]);<span class="comment">//是开始位置截取到指定位置但是不包含指定位置</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[str substringWithRange:<span class="built_in">NSMakeRange</span>(<span class="number">2</span>, <span class="number">3</span>)]);<span class="comment">//按照给定的NSRang字符串截取自串的宽度和位置</span></span><br><span class="line"><span class="built_in">NSArray</span> *arry=[str componentsSeparatedByString:<span class="string">@"="</span>];<span class="comment">//字符串分割</span></span><br></pre></td></tr></table></figure>
+<h3 id="显示网络图片">显示网络图片</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">UIImage</span> *)loadImage</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSArray</span> *paths = <span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSDocumentDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>);</span><br><span class="line">    <span class="built_in">NSString</span> *documentsDirectory = [paths objectAtIndex:<span class="number">0</span>];</span><br><span class="line">    <span class="built_in">UIImage</span> *image = [[<span class="built_in">UIImage</span> alloc] initWithContentsOfFile:[[documentsDirectory stringByAppendingString:<span class="string">@"/image"</span>] stringByAppendingString:<span class="string">@"/default.png"</span>]];</span><br><span class="line">    <span class="keyword">if</span> (image) &#123;</span><br><span class="line">        <span class="keyword">return</span> image;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"image"</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="iOS时间戳">iOS时间戳</h3><p>其实项目并没有用到，就直接抄的网上的，回头好好研究~</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置时间显示格式:  </span></span><br><span class="line">   <span class="built_in">NSString</span>* timeStr = <span class="string">@"2011-01-26 17:40:50"</span>;  </span><br><span class="line">   <span class="built_in">NSDateFormatter</span> *formatter = [[[<span class="built_in">NSDateFormatter</span> alloc] init] autorelease];  </span><br><span class="line">   [formatter setDateStyle:<span class="built_in">NSDateFormatterMediumStyle</span>];  </span><br><span class="line">   [formatter setTimeStyle:<span class="built_in">NSDateFormatterShortStyle</span>];     </span><br><span class="line">   [formatter setDateFormat:<span class="string">@"YYYY-MM-dd HH:mm:ss"</span>]; <span class="comment">//设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置时区</span></span><br><span class="line"><span class="built_in">NSTimeZone</span>* timeZone = [<span class="built_in">NSTimeZone</span> timeZoneWithName:<span class="string">@"Asia/Shanghai"</span>];  </span><br><span class="line">[formatter setTimeZone:timeZone];</span><br><span class="line"><span class="built_in">NSDate</span>* date = [formatter dateFromString:timeStr]; <span class="comment">//将字符串按formatter转成nsdate</span></span><br><span class="line"><span class="built_in">NSDate</span> *datenow = [<span class="built_in">NSDate</span> date];<span class="comment">//现在时间,你可以输出来看下是什么格式</span></span><br><span class="line"><span class="built_in">NSString</span> *nowtimeStr = [formatter stringFromDate:datenow];<span class="comment">//将nsdate按formatter格式转成nsstring</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//时间转时间戳的方法:  </span></span><br><span class="line">   <span class="built_in">NSString</span> *timeSp = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>, (<span class="keyword">long</span>)[datenow timeIntervalSince1970]];  </span><br><span class="line">   <span class="built_in">NSLog</span>(<span class="string">@"timeSp:%@"</span>,timeSp); <span class="comment">//时间戳的值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//时间戳转时间的方法  </span></span><br><span class="line">   <span class="built_in">NSDate</span> *confromTimesp = [<span class="built_in">NSDate</span> dateWithTimeIntervalSince1970:<span class="number">1296035591</span>];  </span><br><span class="line">   <span class="built_in">NSLog</span>(<span class="string">@"1296035591  = %@"</span>,confromTimesp);        </span><br><span class="line">   <span class="built_in">NSString</span> *confromTimespStr = [formatter stringFromDate:confromTimesp];  </span><br><span class="line">   <span class="built_in">NSLog</span>(<span class="string">@"confromTimespStr =  %@"</span>,confromTimespStr);  </span><br><span class="line"><span class="comment">//时间戳转时间的方法:  </span></span><br><span class="line"><span class="built_in">NSDateFormatter</span>* formatter = [[<span class="built_in">NSDateFormatter</span> alloc] init];  </span><br><span class="line">[formatter setDateStyle:<span class="built_in">NSDateFormatterMediumStyle</span>];  </span><br><span class="line">[formatter setTimeStyle:<span class="built_in">NSDateFormatterShortStyle</span>];  </span><br><span class="line">[formatter setDateFormat:<span class="string">@"yyyyMMddHHMMss"</span>];  </span><br><span class="line"><span class="built_in">NSDate</span> *date = [formatter dateFromString:<span class="string">@"1283376197"</span>];  </span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"date1:%@"</span>,date);  </span><br><span class="line">[formatter release];</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -229,6 +234,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/01/29/UITableView样式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          UITableView样式
+        
+      </div>
+    </a>
   
   
     <a href="/2015/12/16/吐槽一句/" id="article-nav-older" class="article-nav-link-wrap">
