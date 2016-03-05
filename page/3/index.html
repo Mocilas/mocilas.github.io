@@ -167,6 +167,83 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-git命令备忘" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/04/git命令备忘/" class="article-date">
+  	<time datetime="2015-11-04T09:28:21.000Z" itemprop="datePublished">2015-11-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/04/git命令备忘/">git命令备忘</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="github常用命令备忘">github常用命令备忘</h2><h3 id="创建版本库">创建版本库</h3><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<p>第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
+<p>第二步，使用命令<code>git commit</code>，完成。</p>
+<p><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
+<h3 id="关联远程库">关联远程库</h3><p>要关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git；</code></p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<h3 id="使用git在本地创建一个项目的过程">使用git在本地创建一个项目的过程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">makdir ~/hello-world    //创建一个项目hello-world</span><br><span class="line"><span class="built_in">cd</span> ~/hello-world       //打开这个项目</span><br><span class="line">git init             //初始化 </span><br><span class="line">touch README</span><br><span class="line">git add README        //更新README文件</span><br><span class="line">git commit -m <span class="string">'first commit'</span>     //提交更新，并注释信息“first commit”</span><br><span class="line">git remote add origin git@github.com:mocilas/hello-world.git     //连接远程github项目  </span><br><span class="line">git push -u origin master     //将本地项目更新到github项目上去</span><br></pre></td></tr></table></figure>
+<h3 id="github提交代码的命令：">github提交代码的命令：</h3><p>第一次关联仓库，提交：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# about-me"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add &lt;file&gt;</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin https://github.com:mocilas/about-me.git</span><br><span class="line">git push -u origin master …or push an existing repository from the <span class="built_in">command</span> line</span><br><span class="line">git remote add origin https://github.com:mocilas/about-me.git</span><br><span class="line">git push -u origin mastergitgit</span><br></pre></td></tr></table></figure>
+<p>其中在仓库已经建立好、链接好之后，如果修改了代码再提交只需使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">"修改了代码"</span></span><br><span class="line">git push -u origin gh-pages</span><br></pre></td></tr></table></figure>
+<h3 id="常见错误">常见错误</h3><ul>
+<li><p>如果输入<code>git remote add origin git@github.com:mocilas/about-me.git</code><br>  提示出错信息：fatal: remote origin already exists.<br>  解决办法如下：<br>  1、先输入<code>git remote rm origin</code><br>  2、再输入<code>git remote add origin git@github.com:mocilas/about-me.git</code>就不会报错了！</p>
+</li>
+<li><p>如果输入<code>git push origin master</code><br>提示出错信息：error:failed to push som refs to …….<br>解决办法如下：<br>  1、先输入<code>git pull origin master //先把远程服务器github上面的文件拉下来</code><br>  2、再输入<code>git push origin master</code><br>  3、如果出现报错 fatal: Couldn’t find remote ref master或者fatal: ‘origin’ does not appear to be a git repository以及fatal: Could not read from remote repository.<br>  4、则需要重新输入<code>git remote add origingit@github.com:mocilas/about-me.git</code></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/git/">git</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-IOS开发随笔1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

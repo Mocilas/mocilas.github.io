@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ios开发笔记(5) | Mocilas&#39;s Blog</title>
+  <title>ios开发笔记-6 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’">
+  <meta name="description" content="设置TableView Separatorinset 分割线从边框顶端开始在ios8上[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];不起作用
+可使用如下方法：
+1234567891011121314-(void)viewDidLayoutSubviews&amp;#123;    if ([self.tableView respondsTo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios开发笔记(5)">
-<meta property="og:url" content="http://mocilas.github.io/2016/03/02/ios开发笔记-5/index.html">
+<meta property="og:title" content="ios开发笔记-6">
+<meta property="og:url" content="http://mocilas.github.io/2016/03/05/ios开发笔记-6/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’">
-<meta property="og:updated_time" content="2016-03-02T06:36:54.000Z">
+<meta property="og:description" content="设置TableView Separatorinset 分割线从边框顶端开始在ios8上[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];不起作用
+可使用如下方法：
+1234567891011121314-(void)viewDidLayoutSubviews&amp;#123;    if ([self.tableView respondsTo">
+<meta property="og:updated_time" content="2016-03-05T07:47:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios开发笔记(5)">
-<meta name="twitter:description" content="“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’">
+<meta name="twitter:title" content="ios开发笔记-6">
+<meta name="twitter:description" content="设置TableView Separatorinset 分割线从边框顶端开始在ios8上[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];不起作用
+可使用如下方法：
+1234567891011121314-(void)viewDidLayoutSubviews&amp;#123;    if ([self.tableView respondsTo">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -166,11 +172,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-ios开发笔记-5" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ios开发笔记-6" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/02/ios开发笔记-5/" class="article-date">
-  	<time datetime="2016-03-02T06:35:19.000Z" itemprop="datePublished">2016-03-02</time>
+      <a href="/2016/03/05/ios开发笔记-6/" class="article-date">
+  	<time datetime="2016-03-05T07:38:07.000Z" itemprop="datePublished">2016-03-05</time>
 </a>
     </div>
   
@@ -183,7 +189,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ios开发笔记(5)
+      ios开发笔记-6
     </h1>
   
 
@@ -207,10 +213,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="“Auto_property_synthesis_will_not_synthesize_property_‘imageView’…”问题的解决">“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决</h2><p>Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’ via another property.  我在自定义UITableViewCell的.h文件里面添加属性<br>@property(nonatomic,strong)UIImageView *imageView;</p>
-<p>解决方法：</p>
-<p>把@property(nonatomic,strong)UIImageView *imageView;<br>这里的imageView名字改一下就行了,imageView好像跟系统自带属性有冲突.</p>
-
+        <h2 id="设置TableView_Separatorinset_分割线从边框顶端开始">设置TableView Separatorinset 分割线从边框顶端开始</h2><p>在ios8上<code>[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];</code>不起作用</p>
+<p>可使用如下方法：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(void)<span class="tag">viewDidLayoutSubviews</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">-</span>(void)<span class="tag">tableView</span>:(UITableView *)<span class="tag">tableView</span> <span class="tag">willDisplayCell</span>:(UITableViewCell *)<span class="tag">cell</span> <span class="tag">forRowAtIndexPath</span>:(NSIndexPath *)<span class="tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setSeparatorInset:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setLayoutMargins:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="调整UITableViewCell的宽度">调整UITableViewCell的宽度</h2><p>UITableViewCell的宽度会在添加到TableView的时候被重设，所以在<code>- (UITableViewCell *)talbeView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</code>里面设置cell的宽度是没用的。<br>新建一个UITableViewCell的子类，然后重写它的-setFrame:方法即可。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">setFrame:</span>(CGRect)frame &#123;</span><br><span class="line">  	frame.origin.x += kCellLeft;</span><br><span class="line">    frame.size.width -= <span class="number">2</span> * kCellLeft;</span><br><span class="line">    [<span class="keyword">super</span> <span class="string">setFrame:</span>frame];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel显示边框">UILabel显示边框</h2><ul>
+<li>添加框架 QuartzCore.framework</li>
+<li>引入头文件<code>#import &quot;QuartzCore/QuartzCore.h&quot;</code></li>
+<li>添加代码：</li>
+</ul>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">self</span>.<span class="keyword">label</span>.layer.borderColor = [UIColor redColor].CGColor;</span><br><span class="line">   <span class="literal">self</span>.<span class="keyword">label</span>.layer.borderWidth = <span class="number">2.0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel设置圆角">UILabel设置圆角</h2>
       
     </div>
     
@@ -219,18 +233,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/05/ios开发笔记-6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ios开发笔记-6
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/21/ios开发笔记-4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ios开发笔记(4)</div>
+    <a href="/2016/03/02/ios开发笔记-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ios开发笔记(5)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -259,7 +264,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ios开发笔记-5" data-title="ios开发笔记(5)" data-url="http://mocilas.github.io/2016/03/02/ios开发笔记-5/"></div>
+	<div class="ds-thread" data-thread-key="ios开发笔记-6" data-title="ios开发笔记-6" data-url="http://mocilas.github.io/2016/03/05/ios开发笔记-6/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -167,6 +167,75 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ios开发笔记-6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/05/ios开发笔记-6/" class="article-date">
+  	<time datetime="2016-03-05T07:38:07.000Z" itemprop="datePublished">2016-03-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/05/ios开发笔记-6/">ios开发笔记-6</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="设置TableView_Separatorinset_分割线从边框顶端开始">设置TableView Separatorinset 分割线从边框顶端开始</h2><p>在ios8上<code>[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];</code>不起作用</p>
+<p>可使用如下方法：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(void)<span class="tag">viewDidLayoutSubviews</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">-</span>(void)<span class="tag">tableView</span>:(UITableView *)<span class="tag">tableView</span> <span class="tag">willDisplayCell</span>:(UITableViewCell *)<span class="tag">cell</span> <span class="tag">forRowAtIndexPath</span>:(NSIndexPath *)<span class="tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setSeparatorInset:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setLayoutMargins:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="调整UITableViewCell的宽度">调整UITableViewCell的宽度</h2><p>UITableViewCell的宽度会在添加到TableView的时候被重设，所以在<code>- (UITableViewCell *)talbeView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</code>里面设置cell的宽度是没用的。<br>新建一个UITableViewCell的子类，然后重写它的-setFrame:方法即可。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">setFrame:</span>(CGRect)frame &#123;</span><br><span class="line">  	frame.origin.x += kCellLeft;</span><br><span class="line">    frame.size.width -= <span class="number">2</span> * kCellLeft;</span><br><span class="line">    [<span class="keyword">super</span> <span class="string">setFrame:</span>frame];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel显示边框">UILabel显示边框</h2><ul>
+<li>添加框架 QuartzCore.framework</li>
+<li>引入头文件<code>#import &quot;QuartzCore/QuartzCore.h&quot;</code></li>
+<li>添加代码：</li>
+</ul>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">self</span>.<span class="keyword">label</span>.layer.borderColor = [UIColor redColor].CGColor;</span><br><span class="line">   <span class="literal">self</span>.<span class="keyword">label</span>.layer.borderWidth = <span class="number">2.0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel设置圆角">UILabel设置圆角</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-ios开发笔记-5" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -769,68 +838,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/11/23/NSString一些常用方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-UIImageView相关用法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/23/UIImageView相关用法/" class="article-date">
-  	<time datetime="2015-11-23T08:07:43.000Z" itemprop="datePublished">2015-11-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/23/UIImageView相关用法/">UIImageView相关用法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="UIImageView">UIImageView</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UIImageView/">UIImageView</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/23/UIImageView相关用法/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
