@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>地图与标记 | Mocilas&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="显示地图在地图的头文件中#import &amp;lt;MapKit/MapKit.h&amp;gt;在地图的头文件中还要引入协议&amp;lt;MKMapViewDelegate&amp;gt;代码如下：
+123456789#import &amp;lt;UIKit/UIKit.h&amp;gt;#import &amp;lt;MapKit/MapKit.h&amp;gt;#import &quot;MapLocation.h&quot;@interface Annotatio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="地图与标记">
+<meta property="og:url" content="http://mocilas.github.io/2016/03/23/地图与标记/index.html">
+<meta property="og:site_name" content="Mocilas's Blog">
+<meta property="og:description" content="显示地图在地图的头文件中#import &amp;lt;MapKit/MapKit.h&amp;gt;在地图的头文件中还要引入协议&amp;lt;MKMapViewDelegate&amp;gt;代码如下：
+123456789#import &amp;lt;UIKit/UIKit.h&amp;gt;#import &amp;lt;MapKit/MapKit.h&amp;gt;#import &quot;MapLocation.h&quot;@interface Annotatio">
+<meta property="og:updated_time" content="2016-03-23T07:18:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="地图与标记">
+<meta name="twitter:description" content="显示地图在地图的头文件中#import &amp;lt;MapKit/MapKit.h&amp;gt;在地图的头文件中还要引入协议&amp;lt;MKMapViewDelegate&amp;gt;代码如下：
+123456789#import &amp;lt;UIKit/UIKit.h&amp;gt;#import &amp;lt;MapKit/MapKit.h&amp;gt;#import &quot;MapLocation.h&quot;@interface Annotatio">
+  
+    <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://avatars1.githubusercontent.com/u/10126518?v=3&u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&s=140">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/10126518?v=3&amp;u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&amp;s=140" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mocilas</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Stay Hungry! Stay Foolish!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Mocilas" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/mocilas/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/u/0/107368566924742778760/posts" title="google">google</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">As long as you look at me, I will be pure forever.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mocilas</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars1.githubusercontent.com/u/10126518?v=3&amp;u=6ef0a81d460afeb704cd0af50016642ffb01ec7f&amp;s=140" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mocilas</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Stay Hungry! Stay Foolish!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Mocilas" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/mocilas/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo">weibo</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/u/0/107368566924742778760/posts" title="google">google</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-地图与标记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/地图与标记/" class="article-date">
+  	<time datetime="2016-03-23T03:02:26.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      地图与标记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="显示地图">显示地图</h2><h3 id="在地图的头文件中#import_&lt;MapKit/MapKit-h&gt;">在地图的头文件中<code>#import &lt;MapKit/MapKit.h&gt;</code></h3><h3 id="在地图的头文件中还要引入协议&lt;MKMapViewDelegate&gt;">在地图的头文件中还要引入协议<code>&lt;MKMapViewDelegate&gt;</code></h3><p>代码如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;MapKit/MapKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"MapLocation.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AnnotationViewController</span> : <span class="title">UIViewController</span> &lt;<span class="title">MKMapViewDelegate</span>&gt;</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) CLLocationDegrees longitude; <span class="comment">// 经度</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) CLLocationDegrees latitude; <span class="comment">// 纬度</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *institutionName; <span class="comment">// 名称</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *locationName; <span class="comment">// 地址名称</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="在地图的controller中声明MKMapView">在地图的controller中声明MKMapView</h3><p>代码如下：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@interface</span> AnnotationViewController ()</span><br><span class="line"><span class="variable">@property</span> (strong, nonatomic) MKMapView *mapView; <span class="comment">// 地图view</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic) CLLocationDistance latitudinalMeters; <span class="comment">// 纬度放大倍数</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic) CLLocationDistance longitudinalMeters; <span class="comment">// 经度放大倍数</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic, strong) CLGeocoder *geocoder; <span class="comment">// 反编码</span></span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="初始化地图view和协议">初始化地图view和协议</h3><p>代码如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)initMap</span><br><span class="line">&#123;</span><br><span class="line">    _mapView = [[<span class="built_in">MKMapView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">64</span>, DF_WIDTH, DF_HEIGHT-<span class="number">64</span>)];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:_mapView];</span><br><span class="line">    _mapView<span class="variable">.mapType</span> = <span class="built_in">MKMapTypeStandard</span>;</span><br><span class="line">    _mapView<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义地图地址模型">自定义地图地址模型</h2><h3 id="location模型头文件代码如下，感觉其实除了遵守&lt;MKAnnotation&gt;协议以外其他的暂时没什么用，只用到了&lt;MKAnnotation&gt;里面的title和subtitle。">location模型头文件代码如下，感觉其实除了遵守<code>&lt;MKAnnotation&gt;</code>协议以外其他的暂时没什么用，只用到了<code>&lt;MKAnnotation&gt;</code>里面的<strong>title</strong>和<strong>subtitle</strong>。</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;MapKit/MapKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MapLocation</span> : <span class="title">NSObject</span>&lt;<span class="title">MKAnnotation</span>&gt;</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readwrite</span>) CLLocationCoordinate2D coordinate; <span class="comment">//</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *streetAddress; <span class="comment">// 街道信息属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *city; <span class="comment">// 城市信息属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *state; <span class="comment">// 邮编</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *zip; <span class="comment">// 地理坐标</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *title; <span class="comment">// 标题</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *subtitle; <span class="comment">// 副标题</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="location的m文件代码如下：用了懒加载。因为在’mapViewController’中会赋值给这两个property，所以感觉也并没有什么用。">location的m文件代码如下：用了懒加载。因为在’mapViewController’中会赋值给这两个<strong>property</strong>，所以感觉也并没有什么用。</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@implementation</span> MapLocation</span><br><span class="line">- (NSString *)title &#123;</span><br><span class="line">    <span class="keyword">if</span>(!_title) _title = @<span class="string">"XXX"</span>;</span><br><span class="line">    <span class="keyword">return</span> _title;</span><br><span class="line">&#125;</span><br><span class="line">- (NSString *)subtitle &#123;</span><br><span class="line">    <span class="keyword">if</span>(!_subtitle)&#123;</span><br><span class="line">        NSMutableString *ret = [NSMutableString <span class="keyword">new</span>];</span><br><span class="line">        <span class="keyword">if</span>(_state)</span><br><span class="line">            [ret <span class="string">appendString:</span>_state];</span><br><span class="line">        <span class="keyword">if</span>(_city)</span><br><span class="line">            [ret <span class="string">appendString:</span>_city];</span><br><span class="line">        <span class="keyword">if</span>(_city &amp;&amp; _state)</span><br><span class="line">            [ret <span class="string">appendString:</span>@<span class="string">","</span>];</span><br><span class="line">        <span class="keyword">if</span>(_streetAddress &amp;&amp; (_city || _state || _zip))</span><br><span class="line">            [ret <span class="string">appendString:</span>@<span class="string">"·"</span>];</span><br><span class="line">        <span class="keyword">if</span>(_streetAddress)</span><br><span class="line">            [ret <span class="string">appendString:</span>_streetAddress];</span><br><span class="line">        <span class="keyword">if</span>(_zip)</span><br><span class="line">            [ret <span class="string">appendFormat:</span>@<span class="string">", %@"</span>, _zip];</span><br><span class="line">        _subtitle = ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _subtitle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="annotation">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="annocation大头针定位">annocation大头针定位</h2><h3 id="关于大头针的view">关于大头针的view</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">MKAnnotationView</span> *)mapView:(<span class="built_in">MKMapView</span> *)mapView viewForAnnotation:(<span class="keyword">id</span>&lt;<span class="built_in">MKAnnotation</span>&gt;)annotation</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">MKPinAnnotationView</span> *annotationView = (<span class="built_in">MKPinAnnotationView</span> *)[_mapView dequeueReusableAnnotationViewWithIdentifier:<span class="string">@"PIN_ANNOTATION"</span>];</span><br><span class="line">    <span class="keyword">if</span>(!annotationView)&#123;</span><br><span class="line">        annotationView = [[<span class="built_in">MKPinAnnotationView</span> alloc]initWithAnnotation:annotation reuseIdentifier:<span class="string">@"PIN_ANNOTATION"</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    annotationView<span class="variable">.pinColor</span> = <span class="built_in">MKPinAnnotationColorRed</span>;</span><br><span class="line">    annotationView<span class="variable">.animatesDrop</span> = <span class="literal">YES</span>;</span><br><span class="line">    annotationView<span class="variable">.canShowCallout</span> = <span class="literal">YES</span>;</span><br><span class="line">    <span class="keyword">return</span> annotationView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="关于有经纬度编码+反编码的部分">关于有经纬度编码+反编码的部分</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">CLLocation *location = [[CLLocation alloc] initWithLatitude:<span class="keyword">self</span><span class="variable">.latitude</span> longitude:<span class="keyword">self</span><span class="variable">.longitude</span>];</span><br><span class="line"><span class="keyword">self</span><span class="variable">.geocoder</span> = [[CLGeocoder alloc] init];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.geocoder</span> reverseGeocodeLocation:location</span><br><span class="line">                    completionHandler:^(<span class="built_in">NSArray</span> *placemarks, <span class="built_in">NSError</span> *error)</span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">if</span> (error == <span class="literal">nil</span> &amp;&amp; [placemarks count] &gt; <span class="number">0</span>)&#123;</span><br><span class="line">         [_mapView removeAnnotations:_mapView<span class="variable">.annotations</span>];</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;[placemarks count];i++)</span><br><span class="line">         &#123;</span><br><span class="line">             CLPlacemark *placemark = placemarks[i];</span><br><span class="line">             <span class="comment">// 调整地图位置和缩放比例</span></span><br><span class="line">             <span class="built_in">MKCoordinateRegion</span> viewRegion = <span class="built_in">MKCoordinateRegionMakeWithDistance</span>(placemark<span class="variable">.location</span><span class="variable">.coordinate</span>, <span class="keyword">self</span><span class="variable">.latitudinalMeters</span>, <span class="keyword">self</span><span class="variable">.longitudinalMeters</span>);</span><br><span class="line">             [_mapView setRegion:viewRegion animated:<span class="literal">YES</span>];</span><br><span class="line">             MapLocation *annotation = [[MapLocation alloc]init];</span><br><span class="line">             annotation<span class="variable">.title</span> = <span class="keyword">self</span><span class="variable">.XXXName</span>;</span><br><span class="line">             annotation<span class="variable">.subtitle</span> = <span class="keyword">self</span><span class="variable">.locationName</span>;</span><br><span class="line">             annotation<span class="variable">.streetAddress</span> = placemark<span class="variable">.thoroughfare</span>;</span><br><span class="line">             annotation<span class="variable">.city</span> = placemark<span class="variable">.locality</span>;</span><br><span class="line">             annotation<span class="variable">.state</span> = placemark<span class="variable">.administrativeArea</span>;</span><br><span class="line">             annotation<span class="variable">.zip</span> = placemark<span class="variable">.postalCode</span>;</span><br><span class="line">             annotation<span class="variable">.coordinate</span> = placemark<span class="variable">.location</span><span class="variable">.coordinate</span>;</span><br><span class="line">             [_mapView addAnnotation:annotation];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">if</span> (error == <span class="literal">nil</span> &amp;&amp; [placemarks count] == <span class="number">0</span>)&#123;</span><br><span class="line">         <span class="built_in">NSLog</span>(<span class="string">@"No results were returned."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">if</span> (error != <span class="literal">nil</span>)&#123;</span><br><span class="line">         <span class="built_in">NSLog</span>(<span class="string">@"An error occurred = %@"</span>, error);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/23/iOS开发随笔-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS开发随笔-3</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="地图与标记" data-title="地图与标记" data-url="http://mocilas.github.io/2016/03/23/地图与标记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Mocilas
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
