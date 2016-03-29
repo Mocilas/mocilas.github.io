@@ -167,6 +167,76 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-clang-error-Linker-command-failed-with-exit-code-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/29/clang-error-Linker-command-failed-with-exit-code-1/" class="article-date">
+  	<time datetime="2016-03-29T06:54:52.000Z" itemprop="datePublished">2016-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/29/clang-error-Linker-command-failed-with-exit-code-1/">clang error: Linker command failed with exit code 1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="clang_error:_Linker_command_failed_with_exit_code_1">clang error: Linker command failed with exit code 1</h2><p>项目中遇到了这样的问题，google了一下，给出了这样几种解决方案：</p>
+<h4 id="第一种，只说了问题：m文件被重复编译。没有说解决方案。">第一种，只说了问题：m文件被重复编译。没有说解决方案。</h4><h4 id="第二种：给出了这样的解决方案：">第二种：给出了这样的解决方案：</h4><p>Just go to the project settings (click on the File Structure icon and then the app name, and then the Tests target), click Build Settings and then scroll down until you see Test Host (or type ‘host’ in the search box).</p>
+<p>Then clear the contents of both the Debug and Release hosts, circled below. The app should then compile without any issues.</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/problemScreen-Shot-2015-06-16-at-16.44.48.png" alt=""></p>
+<h4 id="第三种：这个解决方案和上一个类似：">第三种：这个解决方案和上一个类似：</h4><p>In some case error log window displaying .xctest error, to fix it</p>
+<p>-&gt; Select your project</p>
+<p>-&gt; Beside this(just before General tab) select your projectTest file from dropdown</p>
+<p>-&gt; There is one option (like ProjNameTests)</p>
+<p>-&gt; In Host Application, select your project from dropdown only if it show custom</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/problemL9lm5.png" alt=""></p>
+<h4 id="第四种：还有人直接问了apple的staff，人家是这么回答的：">第四种：还有人直接问了apple的staff，人家是这么回答的：</h4><p>In timerRunningViewController.m, you’re importing the the ViewController implementation (ViewController.m) rather than its header (ViewController.h).</p>
+<h4 id="然而最后呢，用上述方法都没有解决。">然而最后呢，用上述方法都没有解决。</h4><p>后来我发现我的问题是全局变量在不同的文件中被重复定义。换个名字就好啦。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-地图与标记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -772,68 +842,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/01/26/ios学习笔记-3/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-吐槽一句" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/16/吐槽一句/" class="article-date">
-  	<time datetime="2015-12-16T11:09:51.000Z" itemprop="datePublished">2015-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/16/吐槽一句/">吐槽一句</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="吐槽一下踩的坑！">吐槽一下踩的坑！</h1><p>今天下午为了给markdown整这个图片真的要死了！</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/吐槽/">吐槽</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/吐槽/">吐槽</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/16/吐槽一句/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

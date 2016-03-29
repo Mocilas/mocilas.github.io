@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Mocilas&#39;s Blog</title>
+  <title>clang error: Linker command failed with exit code 1 | Mocilas&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Wang Wenxue">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mocilas's Blog">
-<meta property="og:url" content="http://mocilas.github.io/archives/page/4/index.html">
+  <meta name="description" content="clang error: Linker command failed with exit code 1项目中遇到了这样的问题，google了一下，给出了这样几种解决方案：
+第一种，只说了问题：m文件被重复编译。没有说解决方案。第二种：给出了这样的解决方案：Just go to the project settings (click on the File Structure icon and th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="clang error: Linker command failed with exit code 1">
+<meta property="og:url" content="http://mocilas.github.io/2016/03/29/clang-error-Linker-command-failed-with-exit-code-1/index.html">
 <meta property="og:site_name" content="Mocilas's Blog">
-<meta property="og:description" content="Wang Wenxue">
+<meta property="og:description" content="clang error: Linker command failed with exit code 1项目中遇到了这样的问题，google了一下，给出了这样几种解决方案：
+第一种，只说了问题：m文件被重复编译。没有说解决方案。第二种：给出了这样的解决方案：Just go to the project settings (click on the File Structure icon and th">
+<meta property="og:image" content="http://7xp8qf.com1.z0.glb.clouddn.com/problemScreen-Shot-2015-06-16-at-16.44.48.png">
+<meta property="og:image" content="http://7xp8qf.com1.z0.glb.clouddn.com/problemL9lm5.png">
+<meta property="og:updated_time" content="2016-03-29T07:10:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mocilas's Blog">
-<meta name="twitter:description" content="Wang Wenxue">
+<meta name="twitter:title" content="clang error: Linker command failed with exit code 1">
+<meta name="twitter:description" content="clang error: Linker command failed with exit code 1项目中遇到了这样的问题，google了一下，给出了这样几种解决方案：
+第一种，只说了问题：m文件被重复编译。没有说解决方案。第二种：给出了这样的解决方案：Just go to the project settings (click on the File Structure icon and th">
   
     <link rel="alternative" href="/atom.xml" title="Mocilas&#39;s Blog" type="application/atom+xml">
   
@@ -165,166 +171,118 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-clang-error-Linker-command-failed-with-exit-code-1" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/03/29/clang-error-Linker-command-failed-with-exit-code-1/" class="article-date">
+  	<time datetime="2016-03-29T06:54:52.000Z" itemprop="datePublished">2016-03-29</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      clang error: Linker command failed with exit code 1
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/04/Matching a URL/" class="archive-article-date">
-  	<time datetime="2015-11-04T03:27:08.000Z" itemprop="datePublished">11月 4</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/04/Matching a URL/">Matching a URL</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="clang_error:_Linker_command_failed_with_exit_code_1">clang error: Linker command failed with exit code 1</h2><p>项目中遇到了这样的问题，google了一下，给出了这样几种解决方案：</p>
+<h4 id="第一种，只说了问题：m文件被重复编译。没有说解决方案。">第一种，只说了问题：m文件被重复编译。没有说解决方案。</h4><h4 id="第二种：给出了这样的解决方案：">第二种：给出了这样的解决方案：</h4><p>Just go to the project settings (click on the File Structure icon and then the app name, and then the Tests target), click Build Settings and then scroll down until you see Test Host (or type ‘host’ in the search box).</p>
+<p>Then clear the contents of both the Debug and Release hosts, circled below. The app should then compile without any issues.</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/problemScreen-Shot-2015-06-16-at-16.44.48.png" alt=""></p>
+<h4 id="第三种：这个解决方案和上一个类似：">第三种：这个解决方案和上一个类似：</h4><p>In some case error log window displaying .xctest error, to fix it</p>
+<p>-&gt; Select your project</p>
+<p>-&gt; Beside this(just before General tab) select your projectTest file from dropdown</p>
+<p>-&gt; There is one option (like ProjNameTests)</p>
+<p>-&gt; In Host Application, select your project from dropdown only if it show custom</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/problemL9lm5.png" alt=""></p>
+<h4 id="第四种：还有人直接问了apple的staff，人家是这么回答的：">第四种：还有人直接问了apple的staff，人家是这么回答的：</h4><p>In timerRunningViewController.m, you’re importing the the ViewController implementation (ViewController.m) rather than its header (ViewController.h).</p>
+<h4 id="然而最后呢，用上述方法都没有解决。">然而最后呢，用上述方法都没有解决。</h4><p>后来我发现我的问题是全局变量在不同的文件中被重复定义。换个名字就好啦。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/python/">python</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/23/地图与标记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">地图与标记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/04/简单爬虫/" class="archive-article-date">
-  	<time datetime="2015-11-04T03:26:27.000Z" itemprop="datePublished">11月 4</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/04/简单爬虫/">简单爬虫</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crawler/">crawler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/python/">python</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/04/Python Cheat Sheet/" class="archive-article-date">
-  	<time datetime="2015-11-04T03:26:15.000Z" itemprop="datePublished">11月 4</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/04/Python Cheat Sheet/">Python Cheat Sheet</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/python/">python</a>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="clang-error-Linker-command-failed-with-exit-code-1" data-title="clang error: Linker command failed with exit code 1" data-url="http://mocilas.github.io/2016/03/29/clang-error-Linker-command-failed-with-exit-code-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/04/第一篇博客/" class="archive-article-date">
-  	<time datetime="2015-11-04T03:25:25.000Z" itemprop="datePublished">11月 4</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/04/第一篇博客/">第一篇博客</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/hexo/">hexo</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -350,8 +308,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true
