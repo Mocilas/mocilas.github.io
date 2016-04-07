@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/读书笔记/" style="font-size: 10px;">读书笔记</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,208 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios开发笔记-8" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/ios开发笔记-8/" class="article-date">
+  	<time datetime="2016-04-07T07:39:37.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/ios开发笔记-8/">ios开发笔记-8</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ios开发笔记-8">ios开发笔记-8</h2><h3 id="评价、显示半颗星">评价、显示半颗星</h3><p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/ios-QQ20160407-2.png" alt=""></p>
+<p><a href="https://github.com/glenyi/TPFloatRatingView" target="_blank" rel="external">使用的库:TPFloatRatingView</a></p>
+<p>只要设置一下参数就好了：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span><span class="variable">.starView</span> = [[TPFloatRatingView alloc] init];</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(kLeft30, <span class="number">50</span>, <span class="number">100</span>, <span class="number">15</span>);</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, starsWidth, starsHeight);</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.emptySelectedImage</span> = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"star_grey"</span>];</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.fullSelectedImage</span> = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"star_light"</span>];</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.rating</span> = <span class="keyword">self</span><span class="variable">.starNum</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.maxRating</span> = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.minRating</span> = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.editable</span> = <span class="literal">NO</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.halfRatings</span> = <span class="literal">YES</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.starView</span><span class="variable">.floatRatings</span> = <span class="literal">YES</span>;</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.starview</span> addSubview:<span class="keyword">self</span><span class="variable">.starView</span>];</span><br></pre></td></tr></table></figure>
+<p>如果需要编辑星星的话，就要使用TPFloatRatingViewDelegate：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)floatRatingView:(TPFloatRatingView *)ratingView ratingDidChange:(<span class="built_in">CGFloat</span>)rating</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.starnumber</span> = rating;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)floatRatingView:(TPFloatRatingView *)ratingView continuousRating:(<span class="built_in">CGFloat</span>)rating</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.starnumber</span> = rating*<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (rating==<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"打个分吧~"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (rating==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"很差!"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (rating==<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"较差!"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (rating==<span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"一般!"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (rating==<span class="number">4</span>)&#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"挺好!"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.titleLabel</span><span class="variable">.text</span> = <span class="string">@"很棒!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="点击显示大图+长按保存">点击显示大图+长按保存</h3><p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/ios-QQ20160407-0.png" alt="">  <img src="http://7xp8qf.com1.z0.glb.clouddn.com/ios-QQ20160407-1.png" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#import</span> &lt;<span class="tag">JTSImageInfo</span><span class="class">.h</span>&gt;</span><br><span class="line"><span class="id">#import</span> &lt;<span class="tag">JTSImageViewController</span><span class="class">.h</span>&gt;</span><br><span class="line"><span class="id">#import</span> &lt;<span class="tag">JTSSimpleImageDownloader</span><span class="class">.h</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>设立点击图片的响应：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create image info</span></span><br><span class="line"><span class="type">JTSImageInfo</span> *imageInfo = [[<span class="type">JTSImageInfo</span> alloc] <span class="keyword">init</span>];</span><br><span class="line">imageInfo.image = image;</span><br><span class="line">imageInfo.referenceRect = <span class="keyword">self</span>.view.window.frame;</span><br><span class="line">imageInfo.referenceView = <span class="keyword">self</span>.view.window.superview;</span><br><span class="line"><span class="comment">// Setup view controller</span></span><br><span class="line"><span class="type">JTSImageViewController</span> *imageViewer = [[<span class="type">JTSImageViewController</span> alloc]</span><br><span class="line">                                       initWithImageInfo:imageInfo</span><br><span class="line">                                       mode:<span class="type">JTSImageViewControllerMode_Image</span></span><br><span class="line">                                       backgroundStyle:<span class="type">JTSImageViewControllerBackgroundOption_Blurred</span>];</span><br><span class="line"><span class="comment">// Present the view controller.</span></span><br><span class="line">imageViewer.interactionsDelegate  = <span class="keyword">self</span>;</span><br><span class="line">[imageViewer showFromViewController:<span class="keyword">self</span> transition:<span class="type">JTSImageViewControllerTransition_FromOffscreen</span>];</span><br></pre></td></tr></table></figure>
+<p>使用JTSImageViewControllerInteractionsDelegate:</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)imageViewerAllowCopyToPasteboard:(JTSImageViewController *)imageViewer &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">BOOL</span>)imageViewerShouldTemporarilyIgnoreTouches:(JTSImageViewController *)imageViewer &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)imageViewerDidLongPress:(JTSImageViewController *)imageViewer atRect:(<span class="built_in">CGRect</span>)rect &#123;</span><br><span class="line">    _selectedImage = imageViewer<span class="variable">.image</span>;</span><br><span class="line">    ZZActionSheet *actionSheet =</span><br><span class="line">    [[ZZActionSheet alloc] initWithTitle:<span class="literal">nil</span></span><br><span class="line">                                delegate:<span class="keyword">self</span></span><br><span class="line">                       cancelButtonTitle:<span class="string">@"取消"</span></span><br><span class="line">                  destructiveButtonTitle:<span class="string">@"保存到手机"</span></span><br><span class="line">                       otherButtonTitles:<span class="literal">nil</span>];</span><br><span class="line">    actionSheet<span class="variable">.tag</span> = kImageActionSheetTag;</span><br><span class="line">    [actionSheet showInView:imageViewer<span class="variable">.view</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="preprocessor">#pragma mark SavePhotoToPhone</span></span><br><span class="line">- (<span class="keyword">void</span>)image: (<span class="built_in">UIImage</span> *) image didFinishSavingWithError: (<span class="built_in">NSError</span> *) error contextInfo: (<span class="keyword">void</span> *) contextInfo</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">        [SVProgressHUD showErrorWithStatus:<span class="string">@"保存失败"</span>];</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        [SVProgressHUD showSuccessWithStatus:<span class="string">@"保存成功"</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-《幻夜》摘抄" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/《幻夜》摘抄/" class="article-date">
+  	<time datetime="2016-04-07T07:13:13.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/《幻夜》摘抄/">《幻夜》摘抄</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="《幻夜》摘抄">《幻夜》摘抄</h2><p>人呀，只要一着急，肯定会暴露缺点。</p>
+<p>道路是否正确，要看以后的行动。不论起初的选择多么正确，如果之后的做法不对，那也不行。</p>
+<p>“我们别无选择，只能在黑夜中的道路上前行。即便四周如白昼一样明亮，也只是不真实的白昼。对此我们早已认命。”</p>
+<p>“喂，雅也，你好好看看这世上的夫妻。过上两年，丈夫就开始厌倦妻子的身体，再过五年，连看都不看一眼，手上有点钱的男人就会在外面找女人。在那之前忍耐一下就行了。从根本上说，做爱是什么？只不过是生殖行为，小狗小猫都在做，根本用不着在意。你也可以和别的女人随便做爱。关键是彼此的心，不是吗？”</p>
+<p>“有两层意义。第一，这种家庭在世界上根本就不存在。即便看似幸福美满，任何夫妇都有见不得人的地方，只不过是戴上面具隐藏了起来。第二，即便存在这样的美满家庭，我们根本没资格去追求。你不会忘记我们曾经做过的事情吧？”</p>
+<p>“如果能用钱解决，那就简单了。”美冬将胳膊放在桌子上托着腮，望着雅也，“我倒是想出了一个主意。” “什么？” 美冬垂下眼睑，微皱起眉头。“也不是什么好主意，可应该有效果，但做起来很难，而且……不好再求你了。” “别管那些，你先说来听听。” “嗯。”美冬端正了姿势，“只是一个想法，并不想让你绝对按这个做。如果你不愿意，就实话实说。”</p>
+<p>“想利用别人，有各种各样的方法，用钱是最低级的手段。绝不能信那些可以用钱收买的人。”</p>
+<p>不想被有子厌恶——意识到这种想法时，他动摇了。这种感情才是实实在在的，才是对喜欢的人持有的感情。那，对美冬怎样呢？害怕被轻蔑，想成为对她有用的男人，希望满足她的期望，做一个配得上她的男人……总是有这样的想法，但从没有过不想被厌恶这种质朴的心情。</p>
+<p>美冬的话过于肯定，但她认定的事情往往准确无误，这正是这个女人令人恐惧的地方。</p>
+<p>“我们别无选择，只能在黑夜中的道路上前行。即便四周如白昼一样明亮，也只是不真实的白昼。对此我们早已认命。”</p>
+<p>当发现和她在一起的日子都是幻影时，雅也决定从美冬面前消失。再也无法和她共同生活下去了，但他又不能将一切变成白纸。他内心受到的伤害极深，经历的过去太肮脏，根本无法变成白纸。</p>
+<p>加藤再次体会到时间确实在流逝，人的内心也在变化，而且，有些必须变化，否则人将无法生存下去。</p>
+<p>任何人都有想抹掉的过去。估计大家心中也都隐藏着一个梦想——完全变成别人，体会和以前完全不同的人生。</p>
+<p>虽说碰上了好运气，但如果没有卓越的判断力和洞察力，以及最为重要的毅力，肯定无法做到。雅也无法推测她是如何获得这样的能力的，但有一点可以确定，她的前半生肯定非同一般。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摘抄/">摘抄</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-缓存cache" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/缓存cache/" class="article-date">
+  	<time datetime="2016-04-07T07:04:31.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/缓存cache/">缓存cache</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="缓存cahche">缓存cahche</h2><h3 id="存入">存入</h3><p>在网络请求函数中写：</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSData *data = <span class="comment">[NSKeyedArchiver archivedDataWithRootObject:dataarray]</span>;</span><br><span class="line"><span class="comment">[<span class="comment">[NSUserDefaults standardUserDefaults]</span> removeObjectForKey:@“这个地方可以吧API作为key”]</span>;</span><br><span class="line"><span class="comment">[<span class="comment">[NSUserDefaults standardUserDefaults]</span> setObject:data forKey:@“这个地方可以吧API作为key”]</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="取出">取出</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSData</span> *data = [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] objectForKey:API_TOPIC_RCMD_GETRCMD];</span><br><span class="line"><span class="built_in">NSArray</span> *arraycache = [<span class="built_in">NSKeyedUnarchiver</span> unarchiveObjectWithData:data];</span><br><span class="line"><span class="keyword">if</span> (arraycache<span class="variable">.count</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.recommendArray</span> = arraycache;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-Assigning-to-id-Delegate-from-incompatible-type-ViewController-const-strong" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -637,200 +839,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios开发笔记-6" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/05/ios开发笔记-6/" class="article-date">
-  	<time datetime="2016-03-05T07:38:07.000Z" itemprop="datePublished">2016-03-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/05/ios开发笔记-6/">ios开发笔记-6</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="设置TableView_Separatorinset_分割线从边框顶端开始">设置TableView Separatorinset 分割线从边框顶端开始</h2><p>在ios8上<code>[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];</code>不起作用</p>
-<p>可使用如下方法：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(void)<span class="tag">viewDidLayoutSubviews</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">-</span>(void)<span class="tag">tableView</span>:(UITableView *)<span class="tag">tableView</span> <span class="tag">willDisplayCell</span>:(UITableViewCell *)<span class="tag">cell</span> <span class="tag">forRowAtIndexPath</span>:(NSIndexPath *)<span class="tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setSeparatorInset:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setLayoutMargins:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="调整UITableViewCell的宽度">调整UITableViewCell的宽度</h2><p>UITableViewCell的宽度会在添加到TableView的时候被重设，所以在<code>- (UITableViewCell *)talbeView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</code>里面设置cell的宽度是没用的。<br>新建一个UITableViewCell的子类，然后重写它的-setFrame:方法即可。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">setFrame:</span>(CGRect)frame &#123;</span><br><span class="line">  	frame.origin.x += kCellLeft;</span><br><span class="line">    frame.size.width -= <span class="number">2</span> * kCellLeft;</span><br><span class="line">    [<span class="keyword">super</span> <span class="string">setFrame:</span>frame];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="UILabel显示边框">UILabel显示边框</h2><ul>
-<li>添加框架 QuartzCore.framework</li>
-<li>引入头文件<code>#import &quot;QuartzCore/QuartzCore.h&quot;</code></li>
-<li>添加代码：</li>
-</ul>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">self</span>.<span class="keyword">label</span>.layer.borderColor = [UIColor redColor].CGColor;</span><br><span class="line">   <span class="literal">self</span>.<span class="keyword">label</span>.layer.borderWidth = <span class="number">2.0</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="UILabel设置圆角">UILabel设置圆角</h2><pre><code>view.layer.cornerRadius = <span class="number">5</span>;
-</code></pre><p>详情请见<a href="http://www.jianshu.com/p/f970872fdc22" target="_blank" rel="external">技术博客</a>：<a href="http://www.jianshu.com/p/f970872fdc22" target="_blank" rel="external">http://www.jianshu.com/p/f970872fdc22</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios开发笔记-5" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/02/ios开发笔记-5/" class="article-date">
-  	<time datetime="2016-03-02T06:35:19.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/ios开发笔记-5/">ios开发笔记(5)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="“Auto_property_synthesis_will_not_synthesize_property_‘imageView’…”问题的解决">“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决</h2><p>Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’ via another property.  我在自定义UITableViewCell的.h文件里面添加属性<br>@property(nonatomic,strong)UIImageView *imageView;</p>
-<p>解决方法：</p>
-<p>把@property(nonatomic,strong)UIImageView *imageView;<br>这里的imageView名字改一下就行了,imageView好像跟系统自带属性有冲突.</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios开发笔记-4" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/21/ios开发笔记-4/" class="article-date">
-  	<time datetime="2016-02-20T17:11:55.000Z" itemprop="datePublished">2016-02-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/ios开发笔记-4/">ios开发笔记(4)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="“this_class_is_not_key_value_coding-compliant_for_the_key_…”问题的解决">“this class is not key value coding-compliant for the key …”问题的解决</h2><p>一般此问题 都是由interface build与代码中IBOutlet的连接所引起的。</p>
-<p>可能是在代码中对iboutlet的名称进行了修改，导致interface build中的连接实效。</p>
-<p>这次我的代码中出现这个问题的原因就是对iboutlet的名称进行了修改，之后删掉代码之后重新连，仍然不行。</p>
-<p>这时是因为只是删除了代码，而之前的连接线还没有删除，所有右键单击的话会发现有两个连接线。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 	</div>
 
       

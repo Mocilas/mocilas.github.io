@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/读书笔记/" style="font-size: 10px;">读书笔记</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,200 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ios开发笔记-6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/05/ios开发笔记-6/" class="article-date">
+  	<time datetime="2016-03-05T07:38:07.000Z" itemprop="datePublished">2016-03-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/05/ios开发笔记-6/">ios开发笔记-6</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="设置TableView_Separatorinset_分割线从边框顶端开始">设置TableView Separatorinset 分割线从边框顶端开始</h2><p>在ios8上<code>[TableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];</code>不起作用</p>
+<p>可使用如下方法：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(void)<span class="tag">viewDidLayoutSubviews</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([self.tableView <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)]</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">-</span>(void)<span class="tag">tableView</span>:(UITableView *)<span class="tag">tableView</span> <span class="tag">willDisplayCell</span>:(UITableViewCell *)<span class="tag">cell</span> <span class="tag">forRowAtIndexPath</span>:(NSIndexPath *)<span class="tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setSeparatorInset</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setSeparatorInset:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">    <span class="tag">if</span> ([cell <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(<span class="attribute">setLayoutMargins</span>:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[cell setLayoutMargins:UIEdgeInsetsZero]</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="调整UITableViewCell的宽度">调整UITableViewCell的宽度</h2><p>UITableViewCell的宽度会在添加到TableView的时候被重设，所以在<code>- (UITableViewCell *)talbeView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</code>里面设置cell的宽度是没用的。<br>新建一个UITableViewCell的子类，然后重写它的-setFrame:方法即可。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">setFrame:</span>(CGRect)frame &#123;</span><br><span class="line">  	frame.origin.x += kCellLeft;</span><br><span class="line">    frame.size.width -= <span class="number">2</span> * kCellLeft;</span><br><span class="line">    [<span class="keyword">super</span> <span class="string">setFrame:</span>frame];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel显示边框">UILabel显示边框</h2><ul>
+<li>添加框架 QuartzCore.framework</li>
+<li>引入头文件<code>#import &quot;QuartzCore/QuartzCore.h&quot;</code></li>
+<li>添加代码：</li>
+</ul>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">self</span>.<span class="keyword">label</span>.layer.borderColor = [UIColor redColor].CGColor;</span><br><span class="line">   <span class="literal">self</span>.<span class="keyword">label</span>.layer.borderWidth = <span class="number">2.0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="UILabel设置圆角">UILabel设置圆角</h2><pre><code>view.layer.cornerRadius = <span class="number">5</span>;
+</code></pre><p>详情请见<a href="http://www.jianshu.com/p/f970872fdc22" target="_blank" rel="external">技术博客</a>：<a href="http://www.jianshu.com/p/f970872fdc22" target="_blank" rel="external">http://www.jianshu.com/p/f970872fdc22</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-ios开发笔记-5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/02/ios开发笔记-5/" class="article-date">
+  	<time datetime="2016-03-02T06:35:19.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/ios开发笔记-5/">ios开发笔记(5)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="“Auto_property_synthesis_will_not_synthesize_property_‘imageView’…”问题的解决">“Auto property synthesis will not synthesize property ‘imageView’…”问题的解决</h2><p>Auto property synthesis will not synthesize property ‘imageView’ because it is ‘readwrite’ but it will be synthesized ‘readonly’ via another property.  我在自定义UITableViewCell的.h文件里面添加属性<br>@property(nonatomic,strong)UIImageView *imageView;</p>
+<p>解决方法：</p>
+<p>把@property(nonatomic,strong)UIImageView *imageView;<br>这里的imageView名字改一下就行了,imageView好像跟系统自带属性有冲突.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-ios开发笔记-4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/21/ios开发笔记-4/" class="article-date">
+  	<time datetime="2016-02-20T17:11:55.000Z" itemprop="datePublished">2016-02-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/21/ios开发笔记-4/">ios开发笔记(4)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="“this_class_is_not_key_value_coding-compliant_for_the_key_…”问题的解决">“this class is not key value coding-compliant for the key …”问题的解决</h2><p>一般此问题 都是由interface build与代码中IBOutlet的连接所引起的。</p>
+<p>可能是在代码中对iboutlet的名称进行了修改，导致interface build中的连接实效。</p>
+<p>这次我的代码中出现这个问题的原因就是对iboutlet的名称进行了修改，之后删掉代码之后重新连，仍然不行。</p>
+<p>这时是因为只是删除了代码，而之前的连接线还没有删除，所有右键单击的话会发现有两个连接线。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-UITableView样式" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -646,196 +840,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/11/23/NSString一些常用方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-UIImageView相关用法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/23/UIImageView相关用法/" class="article-date">
-  	<time datetime="2015-11-23T08:07:43.000Z" itemprop="datePublished">2015-11-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/23/UIImageView相关用法/">UIImageView相关用法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="UIImageView">UIImageView</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UIImageView/">UIImageView</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/23/UIImageView相关用法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-OC类方法与实例方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/23/OC类方法与实例方法/" class="article-date">
-  	<time datetime="2015-11-23T07:48:03.000Z" itemprop="datePublished">2015-11-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/23/OC类方法与实例方法/">OC类方法与实例方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ios开发中类方法与self的注意点_与实例方法区别">ios开发中类方法与self的注意点 与实例方法区别</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类/">类</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/23/OC类方法与实例方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-iOS开发笔记-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/23/iOS开发笔记-1/" class="article-date">
-  	<time datetime="2015-11-23T02:30:07.000Z" itemprop="datePublished">2015-11-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/23/iOS开发笔记-1/">iOS开发笔记(1)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="iOS开发笔记（1）">iOS开发笔记（1）</h2><h3 id="UIEdgeInsets">UIEdgeInsets</h3><p>UIEdgeInsets，由函数<br>    UIEdgeInsetsMake ( CGFloat top, CGFloat left, CGFloat bottom, CGFloat right );//上，左，下，右<br>构造出。</p>
-<h3 id="项目中用的加载网络图像的方法是：">项目中用的加载网络图像的方法是：</h3><pre><code><span class="attr_selector">[self.image  sd_setImageWithURL:[NSURL URLWithString:model.thumb]</span> <span class="rule"><span class="attribute">placeholderImage</span>:<span class="value">[UIImage imageNamed:@<span class="string">"HJZ_UnLoad"</span>]]</span></span>;
-</code></pre><p>但是要import包：</p>
-<pre><code><span class="preprocessor"><span class="keyword">import</span> &lt;UIImageView+WebCache.h&gt;</span>
-</code></pre><h3 id="网络请求函数">网络请求函数</h3><p>在debug过程中，异步网络请求函数是要执行<strong>两遍</strong>的，于是补了一下关于这方面的知识：</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/23/iOS开发笔记-1/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
