@@ -167,6 +167,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-dyld-Library-not-loaded-rpath-libswiftCore-dylib-Image-not-found" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/30/dyld-Library-not-loaded-rpath-libswiftCore-dylib-Image-not-found/" class="article-date">
+  	<time datetime="2016-05-30T14:05:21.000Z" itemprop="datePublished">2016-05-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/30/dyld-Library-not-loaded-rpath-libswiftCore-dylib-Image-not-found/">dyld: Library not loaded: @rpath/libswiftCore.dylib / Image not found</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="dyld:_Library_not_loaded:_@rpath/libswiftCore-dylib_/_Image_not_found">dyld: Library not loaded: @rpath/libswiftCore.dylib / Image not found</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">dyld</span>: Library not <span class="attribute">loaded</span>: <span class="variable">@rpath</span>/libswiftCore.dylib</span><br><span class="line">Referenced <span class="attribute">from</span>: /private/var/mobile/Containers/Bundle/Application/<span class="number">10</span>DB2FE8-EF09-<span class="number">4857</span>-B4AC-<span class="number">0</span>DB2E4419D6F/App-Name.app/App-Name           </span><br><span class="line"><span class="attribute">Reason</span>: image not found        </span><br><span class="line">(lldb)</span><br></pre></td></tr></table></figure>
+<p>解决办法：</p>
+<p>None of the other solutions helped me, but everything was fixed by deleting Xcode’s Derived Data directory.</p>
+<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/problem-QQ20160530-0.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-ios开发笔记-8" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -775,70 +837,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios开发随笔-2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/10/ios开发随笔-2/" class="article-date">
-  	<time datetime="2016-03-10T02:02:27.000Z" itemprop="datePublished">2016-03-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/10/ios开发随笔-2/">ios开发随笔-2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="布局问题">布局问题</h2><p>最近经常遇到莫名其妙的布局问题，感觉明明代码写对了，却不是自己想要的样子。</p>
-<p>检查发现，其实还是自己粗心大意：</p>
-<ul>
-<li>写布局的时候经常复制粘贴，然后粘贴上来的代码有的控件名字忘记改。</li>
-<li>写cell文件的时候，其实它自带有imageView、lineView之类的控件（注意这些控件名是<em>蓝色</em>的！），然而我自己的控件总是起一个类似于这个的名字如imageview、lineview（这些控件名是<em>绿色</em>的！），在写代码的时候就很容易混淆。以后尽量不要起这样容易混淆的名字！</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
 	</div>
 
       
