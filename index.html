@@ -167,6 +167,65 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-tableviewCell视图tip" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/28/tableviewCell视图tip/" class="article-date">
+  	<time datetime="2016-07-28T09:21:34.000Z" itemprop="datePublished">2016-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/28/tableviewCell视图tip/">tableviewCell视图tip</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="tableViewCell视图笔记">tableViewCell视图笔记</h2><p>自定义的tableViewCell的视图，不要把子视图直接加在自定义cell视图的self上，而是应该加在self.contentView上。因为只有这样，在编辑模式下，视图才会跟着删除按钮一起动画！！！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-dyld-Library-not-loaded-rpath-libswiftCore-dylib-Image-not-found" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -775,94 +834,9 @@
 
 
   
-    <article id="post-iOS开发笔记-7" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/23/iOS开发笔记-7/" class="article-date">
-  	<time datetime="2016-03-23T01:45:25.000Z" itemprop="datePublished">2016-03-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/23/iOS开发笔记-7/">iOS开发笔记-7</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="拨打电话的三种方法">拨打电话的三种方法</h2><ol>
-<li>这种方法，拨打完电话回不到原来的应用，会停留在通讯录里，而且是直接拨打，不弹出提示</li>
-</ol>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">NSMutableString</span> * <span class="atom">str</span>=[[<span class="name">NSMutableString</span> <span class="atom">alloc</span>] <span class="atom">initWithFormat</span>:@<span class="string">"tel:%@"</span>,@<span class="string">"186xxxx6979"</span>];</span><br><span class="line">[[<span class="name">UIApplication</span> <span class="atom">sharedApplication</span>] <span class="atom">openURL</span>:[<span class="name">NSURL</span> <span class="name">URLWithString</span>:<span class="atom">str</span>]];</span><br></pre></td></tr></table></figure>
-<ol>
-<li>这种方法，打完电话后还会回到原来的程序，也会弹出提示，推荐这种</li>
-</ol>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">NSMutableString</span> * <span class="atom">str</span>=[[<span class="name">NSMutableString</span> <span class="atom">alloc</span>] <span class="atom">initWithFormat</span>:@<span class="string">"tel:%@"</span>,@<span class="string">"186xxxx6979"</span>];</span><br><span class="line"><span class="name">UIWebView</span> * <span class="atom">callWebview</span> = [[<span class="name">UIWebView</span> <span class="atom">alloc</span>] <span class="atom">init</span>];</span><br><span class="line">[<span class="atom">callWebview</span> <span class="atom">loadRequest</span>:[<span class="name">NSURLRequest</span> <span class="atom">requestWithURL</span>:[<span class="name">NSURL</span> <span class="name">URLWithString</span>:<span class="atom">str</span>]]];</span><br><span class="line">[<span class="atom">self</span>.<span class="atom">view</span> <span class="atom">addSubview</span>:<span class="atom">callWebview</span>];</span><br><span class="line">[<span class="atom">callWebview</span> <span class="atom">release</span>];</span><br><span class="line">[<span class="atom">str</span> <span class="atom">release</span>];</span><br></pre></td></tr></table></figure>
-<ol>
-<li>这种方法也会回去到原来的程序里（注意这里的telprompt），也会弹出提示</li>
-</ol>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">NSMutableString</span> * <span class="atom">str</span>=[[<span class="name">NSMutableString</span> <span class="atom">alloc</span>] <span class="atom">initWithFormat</span>:@<span class="string">"telprompt://%@"</span>,@<span class="string">"186xxxx6979"</span>];</span><br><span class="line">[[<span class="name">UIApplication</span> <span class="atom">sharedApplication</span>] <span class="atom">openURL</span>:[<span class="name">NSURL</span> <span class="name">URLWithString</span>:<span class="atom">str</span>]];</span><br></pre></td></tr></table></figure>
-<h2 id="底部弹出视图">底部弹出视图</h2><p>项目中的底部弹出视图使用的<strong>ZZActionSheet</strong></p>
-<p>具体使用方法：</p>
-<ul>
-<li>引入头文件和协议</li>
-</ul>
-<p><code>import &quot;ZZActionSheet.h&quot;</code></p>
-<p><code>@interface ViewController ()&lt; ZZActionSheetDelegate&gt;</code></p>
-<ul>
-<li>点击按钮触发底部弹出框：</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//底部弹出框</span></span><br><span class="line">ZZActionSheet *actionSheet =</span><br><span class="line">    [[ZZActionSheet alloc] initWithTitle:<span class="literal">nil</span></span><br><span class="line">								 delegate:<span class="keyword">self</span></span><br><span class="line">                       cancelButtonTitle:<span class="string">@"取消"</span></span><br><span class="line">                  destructiveButtonTitle:<span class="literal">nil</span></span><br><span class="line">                       otherButtonTitles:<span class="keyword">self</span><span class="variable">.telArray</span>];</span><br><span class="line">actionSheet<span class="variable">.tag</span> = <span class="number">0</span>;</span><br><span class="line">[actionSheet showInView:<span class="keyword">self</span><span class="variable">.view</span>];</span><br></pre></td></tr></table></figure>
-<ul>
-<li>实现协议</li>
-</ul>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#pragma</span> <span class="tag">mark</span> <span class="tag">-</span> <span class="tag">ZZActionSheetDelegate</span></span><br><span class="line"><span class="tag">-</span> (void)<span class="tag">ZZActionSheet</span>:(ZZActionSheet *)<span class="tag">actionSheet</span> <span class="tag">clickedButtonAtIndex</span>:(NSInteger)<span class="tag">buttonIndex</span> &#123;</span><br><span class="line">	<span class="comment">//buttonIndex就是从上到下按钮的index</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>

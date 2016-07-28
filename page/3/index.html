@@ -167,6 +167,65 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-UISegmented用法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/UISegmented用法/" class="article-date">
+  	<time datetime="2015-11-24T09:38:17.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/24/UISegmented用法/">UISegmented用法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="UISegmentedControl">UISegmentedControl</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *subjectArray = [[<span class="built_in">NSArray</span> alloc]initWithObjects:<span class="string">@"英语"</span>,<span class="string">@"语文"</span>,<span class="string">@"数学"</span>,<span class="literal">nil</span>];<span class="comment">//初始化UISegmentedControl的数组</span></span><br><span class="line"><span class="comment">//UISegmentedControl</span></span><br><span class="line">   <span class="built_in">UISegmentedControl</span> *subjectSegmented = [[<span class="built_in">UISegmentedControl</span> alloc]initWithItems:subjectArray];<span class="comment">//数据填充</span></span><br><span class="line">   subjectSegmented<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, DF_WIDTH/<span class="number">2</span>, <span class="number">44</span>);</span><br><span class="line">   subjectSegmented<span class="variable">.segmentedControlStyle</span> = <span class="built_in">UISegmentedControlStylePlain</span>;<span class="comment">//设置样式（总共有四种样式）</span></span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;[subjectArray count]; i++)&#123;<span class="comment">//设置当前默认选中的选项</span></span><br><span class="line">       <span class="keyword">if</span>([<span class="keyword">self</span><span class="variable">.subject</span> isEqualToString:<span class="keyword">self</span><span class="variable">.subjectArray</span>[i]])&#123;</span><br><span class="line">           subjectSegmented<span class="variable">.selectedSegmentIndex</span> = i;</span><br><span class="line">           <span class="keyword">break</span>;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">self</span><span class="variable">.navigationview</span><span class="variable">.tintColor</span> = [<span class="built_in">UIColor</span> colorWithHexString:<span class="string">@"#ff393a"</span>];<span class="comment">//边框和字体颜色</span></span><br><span class="line">   [<span class="keyword">self</span><span class="variable">.navigationview</span> addSubview:<span class="keyword">self</span><span class="variable">.subjectSegmented</span>];</span><br><span class="line">   [subjectSegmented addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(changeSubject:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];<span class="comment">//点击动作</span></span><br><span class="line">   [subjectSegmented mas_makeConstraints:^(MASConstraintMaker *make) &#123;<span class="comment">//这里使用了相对布局,可以忽略</span></span><br><span class="line">       make<span class="variable">.centerX</span><span class="variable">.equalTo</span>(<span class="keyword">self</span><span class="variable">.navigationview</span>);</span><br><span class="line"> 		make<span class="variable">.centerYWithinMargins</span><span class="variable">.equalTo</span>(<span class="keyword">self</span><span class="variable">.navigationview</span>)<span class="variable">.with</span><span class="variable">.offset</span>(padding<span class="variable">.top</span>);</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//切换科目</span></span><br><span class="line">-(<span class="keyword">void</span>)changeSubject:(<span class="keyword">id</span>)sender&#123;</span><br><span class="line">    <span class="built_in">UISegmentedControl</span>* control = (<span class="built_in">UISegmentedControl</span>*)sender;<span class="comment">//利用UISegmentedControl来控制选中选项时的操作</span></span><br><span class="line">    <span class="keyword">switch</span> (control<span class="variable">.selectedSegmentIndex</span>) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.subjectSegmented</span><span class="variable">.selectedSegmentIndex</span> = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.navTitle</span> = [<span class="keyword">self</span><span class="variable">.subjectArray</span>[<span class="number">0</span>] stringByAppendingString:<span class="string">@"课本"</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.subjectSegmented</span><span class="variable">.selectedSegmentIndex</span> = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.navTitle</span> = [<span class="keyword">self</span><span class="variable">.subjectArray</span>[<span class="number">1</span>] stringByAppendingString:<span class="string">@"课本"</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.subjectSegmented</span><span class="variable">.selectedSegmentIndex</span> = <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">self</span><span class="variable">.navTitle</span> = [<span class="keyword">self</span><span class="variable">.subjectArray</span>[<span class="number">2</span>] stringByAppendingString:<span class="string">@"课本"</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//以下是其他操作，比如数据更新之类的</span></span><br><span class="line">    [<span class="keyword">self</span> setSubjectEdition];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.rightButton</span> setTitle:<span class="keyword">self</span><span class="variable">.edition</span> forState:(<span class="built_in">UIControlStateNormal</span>)];</span><br><span class="line">    [<span class="keyword">self</span> initData];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.tableView</span> reloadData];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UISegmentedControl/">UISegmentedControl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-NSString一些常用方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -729,67 +788,9 @@
 
 
   
-    <article id="post-《幸福爱》摘抄" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/09/《幸福爱》摘抄/" class="article-date">
-  	<time datetime="2015-11-09T01:55:24.000Z" itemprop="datePublished">2015-11-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/09/《幸福爱》摘抄/">《幸福爱》摘抄</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="幸福爱（杨冰阳）">幸福爱（杨冰阳）</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/幸福爱/">幸福爱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心理学/">心理学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书/">读书</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/09/《幸福爱》摘抄/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 </div>
