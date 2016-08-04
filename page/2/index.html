@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/读书笔记/" style="font-size: 10px;">读书笔记</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
+						<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NSArray/" style="font-size: 10px;">NSArray</a> <a href="/tags/NSString/" style="font-size: 10px;">NSString</a> <a href="/tags/UIImageView/" style="font-size: 10px;">UIImageView</a> <a href="/tags/UISegmentedControl/" style="font-size: 10px;">UISegmentedControl</a> <a href="/tags/UIView/" style="font-size: 10px;">UIView</a> <a href="/tags/crawler/" style="font-size: 10px;">crawler</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/ios/" style="font-size: 20px;">ios</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/乌合之众/" style="font-size: 10px;">乌合之众</a> <a href="/tags/吐槽/" style="font-size: 10px;">吐槽</a> <a href="/tags/嫌疑人X的献身/" style="font-size: 10px;">嫌疑人X的献身</a> <a href="/tags/幸福爱/" style="font-size: 10px;">幸福爱</a> <a href="/tags/心理学/" style="font-size: 13.33px;">心理学</a> <a href="/tags/推理小说/" style="font-size: 10px;">推理小说</a> <a href="/tags/摘抄/" style="font-size: 13.33px;">摘抄</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/正能量/" style="font-size: 10px;">正能量</a> <a href="/tags/秘密/" style="font-size: 10px;">秘密</a> <a href="/tags/笔记/" style="font-size: 18.33px;">笔记</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/读书笔记/" style="font-size: 13.33px;">读书笔记</a> <a href="/tags/随笔/" style="font-size: 11.67px;">随笔</a>
 					</div>
 				</section>
 				
@@ -166,6 +166,160 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-地图与标记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/地图与标记/" class="article-date">
+  	<time datetime="2016-03-23T03:02:26.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/地图与标记/">地图与标记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="显示地图">显示地图</h2><h3 id="在地图的头文件中#import_&lt;MapKit/MapKit-h&gt;">在地图的头文件中<code>#import &lt;MapKit/MapKit.h&gt;</code></h3><h3 id="在地图的头文件中还要引入协议&lt;MKMapViewDelegate&gt;">在地图的头文件中还要引入协议<code>&lt;MKMapViewDelegate&gt;</code></h3><p>代码如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;MapKit/MapKit.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">"MapLocation.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AnnotationViewController</span> : <span class="title">UIViewController</span> &lt;<span class="title">MKMapViewDelegate</span>&gt;</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) CLLocationDegrees longitude; <span class="comment">// 经度</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) CLLocationDegrees latitude; <span class="comment">// 纬度</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *institutionName; <span class="comment">// 名称</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *locationName; <span class="comment">// 地址名称</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="在地图的controller中声明MKMapView">在地图的controller中声明MKMapView</h3><p>代码如下：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@interface</span> AnnotationViewController ()</span><br><span class="line"><span class="variable">@property</span> (strong, nonatomic) MKMapView *mapView; <span class="comment">// 地图view</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic) CLLocationDistance latitudinalMeters; <span class="comment">// 纬度放大倍数</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic) CLLocationDistance longitudinalMeters; <span class="comment">// 经度放大倍数</span></span><br><span class="line"><span class="variable">@property</span> (nonatomic, strong) CLGeocoder *geocoder; <span class="comment">// 反编码</span></span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="初始化地图view和协议">初始化地图view和协议</h3><p>代码如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)initMap</span><br><span class="line">&#123;</span><br><span class="line">    _mapView = [[<span class="built_in">MKMapView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">64</span>, DF_WIDTH, DF_HEIGHT-<span class="number">64</span>)];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.view</span> addSubview:_mapView];</span><br><span class="line">    _mapView<span class="variable">.mapType</span> = <span class="built_in">MKMapTypeStandard</span>;</span><br><span class="line">    _mapView<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义地图地址模型">自定义地图地址模型</h2><h3 id="location模型头文件代码如下，感觉其实除了遵守&lt;MKAnnotation&gt;协议以外其他的暂时没什么用，只用到了&lt;MKAnnotation&gt;里面的title和subtitle。">location模型头文件代码如下，感觉其实除了遵守<code>&lt;MKAnnotation&gt;</code>协议以外其他的暂时没什么用，只用到了<code>&lt;MKAnnotation&gt;</code>里面的<strong>title</strong>和<strong>subtitle</strong>。</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#import <span class="title">&lt;MapKit/MapKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MapLocation</span> : <span class="title">NSObject</span>&lt;<span class="title">MKAnnotation</span>&gt;</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readwrite</span>) CLLocationCoordinate2D coordinate; <span class="comment">//</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *streetAddress; <span class="comment">// 街道信息属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *city; <span class="comment">// 城市信息属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *state; <span class="comment">// 邮编</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *zip; <span class="comment">// 地理坐标</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *title; <span class="comment">// 标题</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *subtitle; <span class="comment">// 副标题</span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<h3 id="location的m文件代码如下：用了懒加载。因为在’mapViewController’中会赋值给这两个property，所以感觉也并没有什么用。">location的m文件代码如下：用了懒加载。因为在’mapViewController’中会赋值给这两个<strong>property</strong>，所以感觉也并没有什么用。</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@implementation</span> MapLocation</span><br><span class="line">- (NSString *)title &#123;</span><br><span class="line">    <span class="keyword">if</span>(!_title) _title = @<span class="string">"XXX"</span>;</span><br><span class="line">    <span class="keyword">return</span> _title;</span><br><span class="line">&#125;</span><br><span class="line">- (NSString *)subtitle &#123;</span><br><span class="line">    <span class="keyword">if</span>(!_subtitle)&#123;</span><br><span class="line">        NSMutableString *ret = [NSMutableString <span class="keyword">new</span>];</span><br><span class="line">        <span class="keyword">if</span>(_state)</span><br><span class="line">            [ret <span class="string">appendString:</span>_state];</span><br><span class="line">        <span class="keyword">if</span>(_city)</span><br><span class="line">            [ret <span class="string">appendString:</span>_city];</span><br><span class="line">        <span class="keyword">if</span>(_city &amp;&amp; _state)</span><br><span class="line">            [ret <span class="string">appendString:</span>@<span class="string">","</span>];</span><br><span class="line">        <span class="keyword">if</span>(_streetAddress &amp;&amp; (_city || _state || _zip))</span><br><span class="line">            [ret <span class="string">appendString:</span>@<span class="string">"·"</span>];</span><br><span class="line">        <span class="keyword">if</span>(_streetAddress)</span><br><span class="line">            [ret <span class="string">appendString:</span>_streetAddress];</span><br><span class="line">        <span class="keyword">if</span>(_zip)</span><br><span class="line">            [ret <span class="string">appendFormat:</span>@<span class="string">", %@"</span>, _zip];</span><br><span class="line">        _subtitle = ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _subtitle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="annotation">@end</span></span><br></pre></td></tr></table></figure>
+<h2 id="annocation大头针定位">annocation大头针定位</h2><h3 id="关于大头针的view">关于大头针的view</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">MKAnnotationView</span> *)mapView:(<span class="built_in">MKMapView</span> *)mapView viewForAnnotation:(<span class="keyword">id</span>&lt;<span class="built_in">MKAnnotation</span>&gt;)annotation</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">MKPinAnnotationView</span> *annotationView = (<span class="built_in">MKPinAnnotationView</span> *)[_mapView dequeueReusableAnnotationViewWithIdentifier:<span class="string">@"PIN_ANNOTATION"</span>];</span><br><span class="line">    <span class="keyword">if</span>(!annotationView)&#123;</span><br><span class="line">        annotationView = [[<span class="built_in">MKPinAnnotationView</span> alloc]initWithAnnotation:annotation reuseIdentifier:<span class="string">@"PIN_ANNOTATION"</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    annotationView<span class="variable">.pinColor</span> = <span class="built_in">MKPinAnnotationColorRed</span>;</span><br><span class="line">    annotationView<span class="variable">.animatesDrop</span> = <span class="literal">YES</span>;</span><br><span class="line">    annotationView<span class="variable">.canShowCallout</span> = <span class="literal">YES</span>;</span><br><span class="line">    <span class="keyword">return</span> annotationView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="关于有经纬度编码+反编码的部分">关于有经纬度编码+反编码的部分</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">CLLocation *location = [[CLLocation alloc] initWithLatitude:<span class="keyword">self</span><span class="variable">.latitude</span> longitude:<span class="keyword">self</span><span class="variable">.longitude</span>];</span><br><span class="line"><span class="keyword">self</span><span class="variable">.geocoder</span> = [[CLGeocoder alloc] init];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.geocoder</span> reverseGeocodeLocation:location</span><br><span class="line">                    completionHandler:^(<span class="built_in">NSArray</span> *placemarks, <span class="built_in">NSError</span> *error)</span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">if</span> (error == <span class="literal">nil</span> &amp;&amp; [placemarks count] &gt; <span class="number">0</span>)&#123;</span><br><span class="line">         [_mapView removeAnnotations:_mapView<span class="variable">.annotations</span>];</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;[placemarks count];i++)</span><br><span class="line">         &#123;</span><br><span class="line">             CLPlacemark *placemark = placemarks[i];</span><br><span class="line">             <span class="comment">// 调整地图位置和缩放比例</span></span><br><span class="line">             <span class="built_in">MKCoordinateRegion</span> viewRegion = <span class="built_in">MKCoordinateRegionMakeWithDistance</span>(placemark<span class="variable">.location</span><span class="variable">.coordinate</span>, <span class="keyword">self</span><span class="variable">.latitudinalMeters</span>, <span class="keyword">self</span><span class="variable">.longitudinalMeters</span>);</span><br><span class="line">             [_mapView setRegion:viewRegion animated:<span class="literal">YES</span>];</span><br><span class="line">             MapLocation *annotation = [[MapLocation alloc]init];</span><br><span class="line">             annotation<span class="variable">.title</span> = <span class="keyword">self</span><span class="variable">.XXXName</span>;</span><br><span class="line">             annotation<span class="variable">.subtitle</span> = <span class="keyword">self</span><span class="variable">.locationName</span>;</span><br><span class="line">             annotation<span class="variable">.streetAddress</span> = placemark<span class="variable">.thoroughfare</span>;</span><br><span class="line">             annotation<span class="variable">.city</span> = placemark<span class="variable">.locality</span>;</span><br><span class="line">             annotation<span class="variable">.state</span> = placemark<span class="variable">.administrativeArea</span>;</span><br><span class="line">             annotation<span class="variable">.zip</span> = placemark<span class="variable">.postalCode</span>;</span><br><span class="line">             annotation<span class="variable">.coordinate</span> = placemark<span class="variable">.location</span><span class="variable">.coordinate</span>;</span><br><span class="line">             [_mapView addAnnotation:annotation];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">if</span> (error == <span class="literal">nil</span> &amp;&amp; [placemarks count] == <span class="number">0</span>)&#123;</span><br><span class="line">         <span class="built_in">NSLog</span>(<span class="string">@"No results were returned."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">if</span> (error != <span class="literal">nil</span>)&#123;</span><br><span class="line">         <span class="built_in">NSLog</span>(<span class="string">@"An error occurred = %@"</span>, error);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-iOS开发随笔-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/iOS开发随笔-3/" class="article-date">
+  	<time datetime="2016-03-23T03:01:12.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/iOS开发随笔-3/">iOS开发随笔-3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="协议与委托">协议与委托</h2><p>这次做项目，用到了一点点协议与委托的东西，把我学到的东西总结一下：</p>
+<p>委托和协议是两个概念，协议实际上相当于C++中的纯虚类的概念，只定义并只能由其它类来实现。而委托类似于Java中的接口。</p>
+<p>协议<strong>@protocol</strong>就是多个文件共同遵守，里面的方法默认必须实现<strong>@required</strong>，也可以设置可选<strong>@optional</strong>。</p>
+<p>委托<strong>delegate</strong>就是A要实现一个方法，但是A没有，就委托B去实现。委托不一定非要用协议来实现。</p>
+<p>在这次的项目中，用到了一点协议与委托。</p>
+<ul>
+<li>在view.h中声明协议</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@protocol</span> XXXDelegate &lt;NSObject&gt;</span><br><span class="line"><span class="variable">@optional</span></span><br><span class="line">- (void)XXX;</span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在view.h的interface中也要声明：</li>
+</ul>
+<p><code>@property (nonatomic, assign) id &lt;XXXDelegate&gt; delegate; // 协议声明&#39;</code></p>
+<ul>
+<li>在view.h中像调用对象一样调用delegate：</li>
+</ul>
+<p><code>[self.delegate XXX];</code></p>
+<ul>
+<li>在实现委托的文件中，比如viewController中，引入delegate：</li>
+</ul>
+<p><code>@interface XXXTableViewController ()&lt;XXXDelegate&gt;</code></p>
+<ul>
+<li>在需要实现协议的控件上：</li>
+</ul>
+<p><code>headView.delegate = self;</code></p>
+<ul>
+<li>最后要实现协议中的方法。</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/ios/">ios</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-iOS开发笔记-7" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -681,194 +835,6 @@
         <p class="article-more-link">
           <a  href="/2015/12/16/吐槽一句/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-用sourceTree提交代码遇到的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/16/用sourceTree提交代码遇到的问题/" class="article-date">
-  	<time datetime="2015-12-16T06:35:51.000Z" itemprop="datePublished">2015-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/16/用sourceTree提交代码遇到的问题/">用sourceTree提交代码遇到的问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="用sourceTree提交代码时遇到的问题">用sourceTree提交代码时遇到的问题</h2><h3 id="xcuserstate">xcuserstate</h3><p>每次并没有改什么东西，只是随便点了几下就会出现的未暂存文件，可以对其停止追踪！<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-14.45.29.png" alt=""><br>右键，停止追踪，提交，推送。以后就不会再有这个讨厌的文件出现了！</p>
-<h3 id="还没有提交就拉代码的囧境">还没有提交就拉代码的囧境</h3><p>有的时候忘了拉取代码就开始提交，往往这时候就会出现提交成功，但无法推送的报错情况：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.54.28.png" alt=""></p>
-<p>而且这时候的状态就是既无法提交又不能拉取代码的窘境，就连贮藏也不行。<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2015.54.38.png" alt=""></p>
-<p>搞了很久，研究出两个办法:</p>
-<ul>
-<li><p>方法一：使用reset+贮藏<br>首先，将本地的develop分支reset到之前的版本：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-15.55.50.png" alt=""></p>
-<p><strong>reset develop to this commit</strong></p>
-<p>选择软合并或者是默认的混合合并【千万不要选择硬合并！不然之前码的代码都没了】<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-15.56.19.png" alt=""></p>
-<p>然后就回到了初始状态：<br><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-16.03.10.png" alt=""></p>
-<p>这时候再暂存+贮藏一下，拉取代码，应用贮藏，解决冲突就可以了~</p>
-</li>
-<li><p>方法二：建立一个新的分支<br>右键新建一个test分支：</p>
-<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.34.08.png" alt=""></p>
-<p>然后checkout（检出，其实就是双击）到原来的分支：</p>
-<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-屏幕快照%202015-12-16%2016.31.41.png" alt=""></p>
-<p>将原来的develop分支reset到初始状态（这个时候要用硬合并，因为你的代码已经保存到test分支里面了所以不用担心）</p>
-<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-%2016.35.14.png" alt=""></p>
-<p>这个时候终于可以拉取远端了！</p>
-<p><img src="http://7xp8qf.com1.z0.glb.clouddn.com/sourceTree-16.35.32.png" alt=""></p>
-<p>然后再把test分支合并到develop分支就可以了~</p>
-<p>其实总结一下这两个方法的原理是一样的，都是先把自己的代码存到一边，然后再拉取远端代码，再合并。如果中间遇到不能拉取的情况，一定是xcuserstate文件在作怪！嗯！</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-ios开发笔记-2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/15/ios开发笔记-2/" class="article-date">
-  	<time datetime="2015-12-15T06:56:33.000Z" itemprop="datePublished">2015-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/15/ios开发笔记-2/">ios开发笔记(2)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="iOS开发笔记（2）">iOS开发笔记（2）</h2><h3 id="关于Masonry包">关于Masonry包</h3><p>Masonry就是一个自动布局框架，用起来很容易上手，也很方便。<br>官方给的源码例子：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10)<span class="comment">;</span></span><br><span class="line">[view1 mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.top.equalTo(superview.mas_top).with.offset(padding.top)<span class="comment">; //with is an optional semantic filler</span></span><br><span class="line">    make.left.equalTo(superview.mas_left).with.offset(padding.left)<span class="comment">;</span></span><br><span class="line">    make.bottom.equalTo(superview.mas_bottom).with.offset(-padding.bottom)<span class="comment">;</span></span><br><span class="line">    make.right.equalTo(superview.mas_right).with.offset(-padding.right)<span class="comment">;</span></span><br><span class="line">&#125;]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<p>or even shorter:</p>
-<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">[view1 mas_makeConstraints:^<span class="list">(<span class="keyword">MASConstraintMaker</span> *make)</span> <span class="collection">&#123;</span><br><span class="line">    make.edges.equalTo<span class="list">(<span class="keyword">superview</span>)</span>.with.insets<span class="list">(<span class="keyword">padding</span>)</span><span class="comment">;</span></span><br><span class="line">&#125;</span>]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<p>大于等于、小于等于：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">make</span><span class="class">.width</span><span class="class">.greaterThanOrEqualTo</span>(<span class="at_rule">@<span class="keyword">200);</span></span><br><span class="line">make.width.<span class="function">lessThanOrEqualTo</span>(@<span class="number">400</span>)</span></span><br></pre></td></tr></table></figure>
-<p>除此之外，我还发现了Masonry一个特别好用的方法：倍数</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">make</span><span class="class">.width</span><span class="class">.equalTo</span>(<span class="tag">self</span><span class="class">.view</span><span class="class">.mas_width</span>)<span class="class">.multipliedBy</span>(0<span class="class">.8</span>);</span><br></pre></td></tr></table></figure>
-<p>但是在用的过程中，我还是发现了一些问题：</p>
-<ul>
-<li>使用了Masonry的相对布局后，好像无法获取控件的高度了</li>
-<li>RadioButton也无法使用Masonry相对布局</li>
-<li>使用Masonry相对布局之后，Label有的时候有些功能无效，比如lineBreakMode和numberOfLines。具体什么情况可以用什么情况无效还没有测试，只是有的时候会遇到这种情况。</li>
-</ul>
-<h3 id="Label换行">Label换行</h3><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">label</span>.lineBreakMode = UILineBreakModeWordWrap;</span><br><span class="line"><span class="keyword">label</span>.numberOfLines = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="点击空白处收回键盘">点击空白处收回键盘</h3><p>在init View的时候加上这几句代码即可：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//点击空白处收回键盘</span></span><br><span class="line"><span class="keyword">self</span><span class="variable">.userInteractionEnabled</span> = <span class="literal">YES</span>;</span><br><span class="line"><span class="built_in">UITapGestureRecognizer</span> *singleTap = [[<span class="built_in">UITapGestureRecognizer</span> alloc] initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(fingerTapped:)];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addGestureRecognizer:singleTap];</span><br></pre></td></tr></table></figure>
-<h3 id="NSNumber">NSNumber</h3><p>NSNumber类型的要用@()括起来，比如@(3)</p>
-<h3 id="UIScrollView">UIScrollView</h3><p>UIScrollView与其他view不同的是，要在最后设置一下contentSize：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span><span class="variable">.scrollView</span><span class="variable">.contentSize</span> = <span class="built_in">CGSizeMake</span>(width, height);</span><br></pre></td></tr></table></figure>
-<h3 id="NSString">NSString</h3><p>连接：</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">label.<span class="keyword">text</span> = [model.grade stringByAppendingFormat:<span class="variable">@"</span><span class="variable">%@</span><span class="variable">%@</span>字<span class="string">",@"</span>  <span class="string">",model.letter_count];</span></span><br></pre></td></tr></table></figure>
-<p>去掉字符串中的换行回车：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">NSString</span> *<span class="keyword">str </span>= [model.content <span class="keyword">stringByTrimmingCharactersInSet:[NSCharacterSet </span>newlineCharacterSet]]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>whitespaceCharacterSet  去除空格</li>
-<li>newlineCharacterSet  去除回车</li>
-<li>whitespaceAndNewlineCharacterSet  去除空格和回车</li>
-</ul>
-<h3 id="图片名称大小写问题">图片名称大小写问题</h3><p>图片名称如果是大写，代码中使用小写的时候，在模拟机上跑可以，但是真机上就不行了！</p>
-<h3 id="判断字符串是否为空">判断字符串是否为空</h3><p>判断字符串是否为空的时候，我以前习惯用</p>
-<pre><code>[str isEqualToString@<span class="string">""</span>]
-</code></pre><p>但实际上有更好的办法：判断字符串的长度：</p>
-<pre><code>!str.<span class="property">length</span>
-</code></pre><h3 id="Label_attributedText">Label attributedText</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSMutableAttributedString</span> *)contentAttributedString:(<span class="built_in">NSString</span> *)text</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSMutableAttributedString</span> * string = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:text];</span><br><span class="line">	<span class="built_in">UIFont</span> *font = [<span class="built_in">UIFont</span> fontWithName:<span class="string">@"Heiti SC"</span> size:<span class="number">16</span>];</span><br><span class="line">    <span class="built_in">NSMutableParagraphStyle</span> *style = [[<span class="built_in">NSParagraphStyle</span> defaultParagraphStyle] mutableCopy];</span><br><span class="line">    style<span class="variable">.lineBreakMode</span> = <span class="built_in">NSLineBreakByWordWrapping</span>;</span><br><span class="line">    style<span class="variable">.lineSpacing</span> = <span class="number">4</span>;<span class="comment">//行间距</span></span><br><span class="line">    style<span class="variable">.paragraphSpacing</span> = <span class="number">0.5</span> * font<span class="variable">.lineHeight</span>;<span class="comment">//段间距</span></span><br><span class="line">    style<span class="variable">.hyphenationFactor</span> = <span class="number">1.0</span>;</span><br><span class="line">    style<span class="variable">.alignment</span> = <span class="built_in">NSTextAlignmentLeft</span>;</span><br><span class="line">    [string addAttribute:<span class="built_in">NSParagraphStyleAttributeName</span> value:style range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>,string<span class="variable">.length</span>)];</span><br><span class="line">    [string addAttribute:<span class="built_in">NSFontAttributeName</span> value:kSYSTEMFONT(<span class="number">16</span>) range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>,string<span class="variable">.length</span>)];</span><br><span class="line">    <span class="keyword">return</span> string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后调用：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">label.attributedText</span> = [<span class="keyword">self </span>contentAttributedString:contentLabel<span class="preprocessor">.text</span>]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<h3 id="点击空白处收回键盘-1">点击空白处收回键盘</h3><p>在init view的时候加入</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//点击空白处收回键盘</span></span><br><span class="line"><span class="keyword">self</span><span class="variable">.userInteractionEnabled</span> = <span class="literal">YES</span>;</span><br><span class="line"><span class="built_in">UITapGestureRecognizer</span> *singleTap = [[<span class="built_in">UITapGestureRecognizer</span> alloc] initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(fingerTapped:)];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addGestureRecognizer:singleTap];</span><br></pre></td></tr></table></figure>
-<p>然后调用TextField的delegate：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="keyword">void</span>)textFieldDidBeginEditing:(<span class="built_in">UITextField</span> *)textField</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">CGFloat</span> keyboardHeight = <span class="number">240.0</span>f;<span class="comment">//这个地方是键盘的高度，可以根据实际情况修改</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span> - keyboardHeight &gt; textField<span class="variable">.frame</span><span class="variable">.origin</span><span class="variable">.y</span> + textField<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>)&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">CGFloat</span> moveHeight = textField<span class="variable">.frame</span><span class="variable">.origin</span><span class="variable">.y</span> - (<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span> - keyboardHeight - textField<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>);</span><br><span class="line">        [<span class="built_in">UIView</span> beginAnimations:<span class="string">@"scrollView"</span> context:<span class="literal">nil</span>];</span><br><span class="line">        [<span class="built_in">UIView</span> setAnimationCurve:<span class="built_in">UIViewAnimationCurveEaseInOut</span>];</span><br><span class="line">        [<span class="built_in">UIView</span> setAnimationDuration:<span class="number">0.275</span>f];</span><br><span class="line">        <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.origin</span><span class="variable">.x</span>, -moveHeight, <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>);</span><br><span class="line">        [<span class="built_in">UIView</span> commitAnimations];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">-(<span class="keyword">void</span>)textFieldDidEndEditing:(<span class="built_in">UITextField</span> *)textField</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="built_in">UIView</span> beginAnimations:<span class="string">@"scrollView"</span> context:<span class="literal">nil</span>];</span><br><span class="line">    [<span class="built_in">UIView</span> setAnimationCurve:<span class="built_in">UIViewAnimationCurveEaseInOut</span>];</span><br><span class="line">    [<span class="built_in">UIView</span> setAnimationCurve:<span class="number">0.275</span>f];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.origin</span><span class="variable">.x</span>, <span class="number">0</span> , <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>);</span><br><span class="line">    [<span class="built_in">UIView</span> commitAnimations];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.textField</span> resignFirstResponder];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是会出现问题，就是自定义的NavigationBar也会上移，目前还不知道该怎么解决。以后深入研究一下~</p>
-<h3 id="其他需要注意的地方">其他需要注意的地方</h3><ul>
-<li>self.currentHeight 最好使用CGFloat类型，虽然NSIngteger也可以</li>
-<li>为button加tag的时候，tag的命名要规范，不要用数字，不然加pingback别人看不懂</li>
-<li>.h文件最好不要import头文件，因为会增加编译时间。如果需要的话，可以用<code>@class</code>类，然后再.m文件里import头文件</li>
-<li>不要再使用<code>!=0</code>这种东西了！！！</li>
-<li>UItableView的delegate方法里，如果数组大小为0：</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span><span class="variable">.array</span><span class="variable">.count</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那么</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-</span>(UITableViewCell*)<span class="tag">tableView</span>:(UITableView *)<span class="tag">tableView</span> <span class="tag">cellForRowAtIndexPath</span>:(NSIndexPath *)<span class="tag">indexPath</span></span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>就不执行了。<br>所以没必要在上面那个方法中单独去判断self.array.count是否为0.</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/ios/">ios</a>
-	</div>
-
-
       
       <div class="clearfix"></div>
     </div>
